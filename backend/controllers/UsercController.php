@@ -10,22 +10,30 @@ use yii\filters\VerbFilter;
 use common\models\UserOperations as User;
 use common\models\Branch;
 use common\models\Company;
+use yii\filters\AccessControl;
 
 /**
  * UsercController implements the CRUD actions for User model.
  */
 class UsercController extends Controller
 {
-    /**
-     * @inheritdoc
-     */
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['index', 'view', 'create', 'update', 'delete'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => ['post'],
                 ],
             ],
         ];

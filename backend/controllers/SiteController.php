@@ -76,7 +76,7 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->redirect(['user/index']);
+            return $this->redirect(['/userc']);
         } else {
             return $this->render('login', [
                 'model' => $model,

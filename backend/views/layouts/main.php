@@ -29,21 +29,22 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'Loyalty Rewards',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    $menuItems = [
-        ['label' => 'Users', 'url' => ['/userc/index']],
-        ['label' => 'Sales', 'url' => ['/sales/index']],
-        ['label' => 'Points', 'url' => ['/points/index']],
-        ['label' => 'History', 'url' => ['/history/index']],
-    ];
+    $menuItems = [];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
+        $menuItems = [
+            ['label' => 'Users', 'url' => ['/userc/index']],
+            ['label' => 'Sales', 'url' => ['/sales/index']],
+            ['label' => 'Points', 'url' => ['/points/index']],
+            ['label' => 'History', 'url' => ['/history/index']],
+        ];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(

@@ -7,10 +7,12 @@
 
 namespace console\controllers;
 
+use Yii;
 use yii\console\Controller;
 use common\models\Superuser;
 use common\models\Company;
 use common\models\Branch;
+use common\models\UserOperations;
 
 /**
  * This command echoes the first argument that you have entered.
@@ -27,6 +29,7 @@ class AppController extends Controller
         $this->stdout("Setting up defaults \n");
         $this->runAction('set-super');
         $this->runAction('set-company');
+        $this->runAction('set-users');
     }
 
     public function actionSetCompany()
@@ -61,5 +64,23 @@ class AppController extends Controller
         if ($user->save()) {
             $this->stdout("Super User created \n");
         }
+    }
+
+    public function actionSetUsers()
+    {
+        for ($each=1; $each < 16; $each++) { 
+            $user = new UserOperations();
+            $user->isNewRecord = true;
+            $user->username = "company_$each";
+            $user->firstname = 'company';
+            $user->middlename = 'company';
+            $user->lastname = 'company';
+            // $user->email = "company@company.com";
+            $user->direct_upline = $each - 1;
+            $user->signup();
+            // $user->save();
+            $this->stdout("Primary User $each created \n");
+        }
+        $this->stdout("Primary Users created \n");
     }
 }

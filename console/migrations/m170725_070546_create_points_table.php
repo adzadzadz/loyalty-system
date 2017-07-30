@@ -1,4 +1,4 @@
-<?php
+s<?php
 
 use yii\db\Migration;
 
@@ -15,8 +15,13 @@ class m170725_070546_create_points_table extends Migration
         $this->createTable('{{%points}}', [
             'id' => $this->primaryKey(),
             'user_id' => $this->integer(),
-            'points' => $this->integer()
+            'points' => $this->integer(),
+            'created_at' => $this->integer(),
+            'updated_at' => $this->integer(),
         ]);
+        // $this->addPrimaryKey( 'uid_pk', '{{%points}}', 'user_id' );
+        $this->createIndex( 'uid_pts_ix', '{{%points}}', 'user_id', $unique = true );
+        $this->addForeignKey( 'uid_pts_fk', '{{%points}}', ['user_id'], '{{%user}}', ['user_id'], $delete = 'CASCADE', $update = null );
     }
 
     /**

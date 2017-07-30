@@ -33,6 +33,10 @@ use yii\bootstrap\Alert;
           <?= Html::input('text', 'User[lastname]', $value = null, ['class' => 'form-control']); ?>
         </div>
         <div class="form-group">
+          <label for="">Parent</label>
+          <?= Html::dropDownList('direct_upline', $selection = null, $userList, ['class' => 'form-control']); ?>
+        </div>
+        <div class="form-group">
           <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']); ?>
         </div>
       <?= Html::endForm() ?>

@@ -24,8 +24,13 @@ class m170725_070520_create_user_table extends Migration
             'middlename' => $this->string(),
             'lastname' => $this->string(),
 
-            'direct_upline' => $this->integer(),
+            // Primary system requirement
+            'direct_upline' => $this->integer()->defaultValue(0),
+            'has_one_point' => $this->integer()->defaultValue(0),
+            'last_level_given' => $this->integer()->defaultValue(0),
+            'last_user_given'  => $this->integer()->defaultValue(0),
 
+            // User meta, can be moved to a different table
             'birthdate' => $this->integer(),
             'gender' => $this->string(),
             'civilstatus' => $this->string(),

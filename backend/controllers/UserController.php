@@ -24,16 +24,20 @@ class UserController extends Controller
             $branchList[$each->branch_code] = $each->name;
         }
         $users = User::find()->all();
+        $userList = [];
+        foreach ($users as $user) {
+            $userList[$user->id] = "$user->username - $user->firstname $user->middlename $user->lastname";
+        }
         return $this->render('index', [
             'branches' => $branchList,
-            'users' => $users
+            'users' => $users,
+            'userList' => $userList
         ]);
     }
 
     public function actionSignup()
     {
         $user = new User;
-        $user->load(Yii::$app->request->post());
         if ($user->load(Yii::$app->request->post()) && $result = $user->signup()) {
             Yii::$app->getSession()->setFlash('signupResult', 'Registration Success.');
         } else {

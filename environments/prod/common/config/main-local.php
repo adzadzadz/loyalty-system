@@ -3,9 +3,9 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=admin_dloyaltyrewards',
-            'username' => 'admin_dloyaltyrewards',
-            'password' => 'c3n1VdhHeo',
+            'dsn' => 'mysql:host=localhost;dbname=admin_loyalty',
+            'username' => 'admin_loyalty',
+            'password' => 'mz4ONOHWm7',
             'charset' => 'utf8',
         ],
         'mailer' => [

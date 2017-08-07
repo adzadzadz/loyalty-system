@@ -14,10 +14,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
+<!-- 
     <p>
-        <?= Html::a('Create Points', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+        <?php // Html::a('Create Points', ['create'], ['class' => 'btn btn-success']) ?>
+    </p> -->
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -27,6 +27,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'user_id',
             'points',
+
+            ['label'=>'Created At', 'value'=>function ($model, $index, $widget) { 
+                return date('m-d-Y (h:m:s)', $model->created_at); 
+            }],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

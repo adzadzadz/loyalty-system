@@ -101,7 +101,7 @@ class Points extends \yii\db\ActiveRecord
         $counter = 0;
         for ($i=1; $i < (int)floor($levels) + 1; $i++) {
             if ($lastLevel == 15) {
-                $user[$counter] = User::findOne($me->direct_upline)->direct_upline;
+                $user[$counter] = $me->direct_upline;
                 $lastLevel = -1;
             }
             if ($user[$counter]) {
@@ -127,7 +127,6 @@ class Points extends \yii\db\ActiveRecord
         }
         return false;
     }
-
 
     /**
      * @inheritdoc

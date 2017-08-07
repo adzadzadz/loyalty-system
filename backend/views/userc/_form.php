@@ -13,11 +13,19 @@ use yii\widgets\ActiveForm;
         $branchList[$each->branch_code] = $each->name;
     }
     $users = \common\models\User::find()->all();
-    $userList = [];
-    foreach ($users as $user) {
-        $userList[$user->id] = "$user->username - $user->firstname $user->middlename $user->lastname";
-    }
+    // $userList = [];
+    // foreach ($users as $user) {
+    //     $userList[$user->id] = "$user->username - $user->firstname $user->middlename $user->lastname";
+    // }
+    $user = $model->isNewRecord ? \common\models\User::findOne($upline_id) : \common\models\User::findOne($model->direct_upline);
 ?>
+
+<div class="col-sm-12">
+<?php if ($model->isNewRecord): ?>
+    <h1>Create user downline for <small>(<?= $user->username ?>) <?= $user->firstname?> <?= $user->lastname ?></small></h1>
+<?php endif ?>
+    
+</div>
 <div class="col-sm-6">
     <div class="user-form">
 
@@ -27,7 +35,9 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'branch')->dropdownList($branchList) ?>
 
-            <?= $form->field($model, 'direct_upline')->dropdownList($userList) ?>
+            <?php // $form->field($model, 'direct_upline')->dropdownList($userList) ?>
+
+            <?= $form->field($model, 'direct_upline')->textInput(['type' => 'hidden', 'value' => $upline_id])->label(false) ?>
 
         <?php endif ?>
         

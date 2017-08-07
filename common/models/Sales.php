@@ -66,16 +66,16 @@ class Sales extends \yii\db\ActiveRecord
             $history->type = "sales";
             $history->value = $this->amount;
 
-            $points = new Points;
-            $pointsData = [
-                'Points' => [
-                    'user_id' => $this->user_id,
-                    'points'  => $totalPoints,
-                ]
-            ];
+            // $points = new Points;
+            // $pointsData = [
+            //     'Points' => [
+            //         'user_id' => $this->user_id,
+            //         'points'  => $totalPoints,
+            //     ]
+            // ];
             // $points->load($pointsData);
             // return $points->savePoints();
-            if ($sale->save() && $history->save() && $points->load($pointsData) && $points->savePoints()) {
+            if ($sale->save() && $history->save()) {
                 return $sale;
             }
         }

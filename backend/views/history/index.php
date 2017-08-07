@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use common\models\User;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\HistorySearch */
@@ -27,10 +28,18 @@ $this->params['breadcrumbs'][] = $this->title;
             'user_id',
             'type',
             'value',
-            'created_at',
-            'updated_at',
-            'created_by',
-            'updated_by',
+            ['label'=>'Created At', 'value'=>function ($model, $index, $widget) { 
+                return date('m-d-Y (h:m:s)', $model->created_at); 
+            }],
+            ['label'=>'Updated At', 'value'=>function ($model, $index, $widget) { 
+                return date('m-d-Y (h:m:s)', $model->updated_at); 
+            }],
+            ['label'=>'Created By', 'value'=>function ($model, $index, $widget) { 
+                return User::findOne($model->created_by)->username;
+            }],
+            ['label'=>'Updated By', 'value'=>function ($model, $index, $widget) { 
+                return  User::findOne($model->updated_by)->username; 
+            }],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

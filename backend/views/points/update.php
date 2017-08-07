@@ -11,11 +11,10 @@ $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' 
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="points-update">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
+    
+    <h3>This feature has been disabled for security purposes.</h3>
+    <?php /* $this->render('_form', [
+        'points' => $model,
+    ]) */ ?>
 
 </div>

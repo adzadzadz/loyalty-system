@@ -71,7 +71,7 @@ class UsercController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($upline_id = null)
     {
         $model = new User;
 
@@ -80,6 +80,7 @@ class UsercController extends Controller
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'upline_id' => $upline_id
             ]);
         }
     }

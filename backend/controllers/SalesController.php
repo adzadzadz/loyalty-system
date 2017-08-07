@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\Sales;
+use common\models\Points;
 use backend\models\SalesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -69,16 +70,18 @@ class SalesController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($id = null)
     {
-        $model = new Sales();
-        // $model->load(Yii::$app->request->post());
-        // return var_dump($sales = $model->createSales());
-        if ($model->load(Yii::$app->request->post()) && $sales = $model->createSales()) {
+        $sales = new Sales();
+        $points = new Points();
+
+        if ($sales->load(Yii::$app->request->post()) && $sales = $sales->createSales()) {
             return $this->redirect(['view', 'id' => $sales->id]);
         } else {
             return $this->render('create', [
-                'model' => $model,
+                'sales' => $sales,
+                'points' => $points,
+                'user_id' => $id,
             ]);
         }
     }

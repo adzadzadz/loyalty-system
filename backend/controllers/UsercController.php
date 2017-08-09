@@ -11,6 +11,7 @@ use common\models\UserOperations as User;
 use common\models\Branch;
 use common\models\Company;
 use yii\filters\AccessControl;
+use common\models\UserOperations;
 
 /**
  * UsercController implements the CRUD actions for User model.
@@ -24,7 +25,7 @@ class UsercController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index', 'view', 'create', 'update', 'delete'],
+                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'tree'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -37,6 +38,16 @@ class UsercController extends Controller
                 ],
             ],
         ];
+    }
+
+    public function actionTree($id)
+    {
+        $users = UserOperations::getParent($id);
+        // return print_r($users[$id]['dls'][0]['dls']);
+        // return print_r($users[0][0]->username);
+        return $this->render('tree', [
+            'users' => $users,
+        ]);
     }
 
     /**

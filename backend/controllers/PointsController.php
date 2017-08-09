@@ -75,6 +75,8 @@ class PointsController extends Controller
     {
         $model = new Points();
 
+        $model->load(Yii::$app->request->post());
+        // return var_dump($model->savePoints());
         if ($model->load(Yii::$app->request->post()) && $model = $model->savePoints()) {
             Yii::$app->session->setFlash('success', "The Points record has been saved.");
             return $this->redirect(['index']);

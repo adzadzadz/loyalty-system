@@ -10,6 +10,7 @@ use yii\filters\AccessControl;
 use common\models\User;
 use common\models\Branch;
 use common\models\Company;
+use common\users\UserOperations;
 
 /**
  * Site controller
@@ -45,4 +46,5 @@ class UserController extends Controller
         }
         return $this->redirect(['user/index']);
     }
+
 }

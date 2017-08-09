@@ -102,7 +102,7 @@ class Points extends \yii\db\ActiveRecord
         for ($i=1; $i < (int)floor($levels) + 1; $i++) {
             if ($lastLevel == 15) {
                 $user[$counter] = $me->direct_upline;
-                $lastLevel = -1;
+                $lastLevel = 0;
             }
             if ($user[$counter]) {
                 if ($this->addPoints($user[$counter], Yii::$app->appConfig->pointsPerLevel)) {
@@ -114,6 +114,7 @@ class Points extends \yii\db\ActiveRecord
                 $history->save();
             }
             if ($direct_upline = User::findOne($user[$counter])->direct_upline) {
+
                 $user[$counter + 1] = $direct_upline;
             }
             

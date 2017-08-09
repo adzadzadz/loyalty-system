@@ -49,7 +49,7 @@ class Points extends \yii\db\ActiveRecord
             if ($this->addPoints($this->user_id, $this->points)) {
                 $levels = $this->points / Yii::$app->appConfig->pointPerLevel;
             }
-            return $this->distributePoints($levels);
+            return $this->distributePoints(abs($levels), $type = $levels > 0 ? "+" : "-");
         }
         return false;
     }
@@ -72,7 +72,7 @@ class Points extends \yii\db\ActiveRecord
         return false;
     }
 
-    public function distributePoints($levels)
+    public function distributePoints($levels, $type = "+")
     {
         $me = User::findOne($this->user_id);
         // Check if there's extra points
@@ -105,7 +105,7 @@ class Points extends \yii\db\ActiveRecord
                 $lastLevel = 0;
             }
             if ($user[$counter]) {
-                if ($this->addPoints($user[$counter], Yii::$app->appConfig->pointsPerLevel)) {
+                if ($this->addPoints($user[$counter], $type == "+" ? abs(Yii::$app->appConfig->pointsPerLevel) : -abs(Yii::$app->appConfig->pointsPerLevel))) {
                     $history = new History;
                     $history->user_id = $user[$counter];
                     $history->type = "points($this->user_id)";
@@ -121,6 +121,7 @@ class Points extends \yii\db\ActiveRecord
             $lastLevel++;
             $counter++;
         }
+        return $user;
         $me->last_user_given = $user[$counter - 1];
         $me->last_level_given = $lastLevel;
         if ($me->save()) {

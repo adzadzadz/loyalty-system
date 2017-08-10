@@ -22,57 +22,90 @@ use common\models\User;
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-6">
-        <div class="sales-form">
+<div class="col-md-12 well">
+  <h3>Regular Transactions</h3>
+  <div class="row">
+      <div class="col-md-6">
+          <div class="sales-form">
 
-            <?php $form = ActiveForm::begin(); ?>
-            
-            <?php if ($sales->isNewRecord): ?>
-                <?= $form->field($sales, 'user_id')->textInput(['type' => 'hidden', 'value' => $user->id])->label(false) ?>                
-            <?php endif ?>
+              <?php $form = ActiveForm::begin(); ?>
+              
+              <?php if ($sales->isNewRecord): ?>
+                  <?= $form->field($sales, 'user_id')->textInput(['type' => 'hidden', 'value' => $user->id])->label(false) ?>                
+              <?php endif ?>
 
-            <?= $form->field($sales, 'amount')->textInput(['type' => 'number', 'id' => 'amount'])->label('Sales') ?>
+              <?= $form->field($sales, 'amount')->textInput(['type' => 'number', 'id' => 'amount'])->label('Sales') ?>
 
-            <div class="form-group">
-                <?= Html::submitButton($sales->isNewRecord ? 'Submit Sales' : 'Update', ['class' => $sales->isNewRecord ? 'btn btn-success btn-block btn-lg' : 'btn btn-primary btn-block btn-lg']) ?>
-            </div>
+              <div class="form-group">
+                  <?= Html::submitButton($sales->isNewRecord ? 'Submit Sales' : 'Update', ['class' => $sales->isNewRecord ? 'btn btn-primary btn-block btn-md' : 'btn btn-primary btn-block btn-lg']) ?>
+              </div>
 
-            <?php ActiveForm::end(); ?>
+              <?php ActiveForm::end(); ?>
 
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="jumbotron" style="background: #f2f2f2;">
-            <h1><span id="salesTotal">0</span><small>php</small></h1>
-        </div>
-    </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+          <div class="jumbotron" style="background: #474747; color: #fff;">
+              <h1 style="color: #fff;"><span id="salesTotal">0</span><small>php</small></h1>
+          </div>
+      </div>
+  </div>
+
+  <?php if ($sales->isNewRecord): ?>
+      <hr>
+      <div class="row">
+          <div class="col-md-6">
+              <div class="points-form">
+                  
+                  <?php $form = ActiveForm::begin(['action' => ['/points/create']]); ?>
+                  
+                  <?= $form->field($points, 'user_id')->textInput(['type' => 'hidden', 'value' => $user->id])->label(false) ?>
+
+                  <?= $form->field($points, 'points')->textInput(['type' => 'number', 'id' => 'points']) ?>
+                  <h5><b>Note: Points submitted will be shared across uplines.</b></h5>
+
+                  <div class="form-group">
+                      <?= Html::submitButton($points->isNewRecord ? 'Submit Points' : 'Update', ['class' => $points->isNewRecord ? 'btn btn-primary btn-block btn-md' : 'btn btn-primary btn-block btn-lg']) ?>
+                  </div>
+
+                  <?php ActiveForm::end(); ?>
+
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="jumbotron" style="background: #474747;">
+                  <h1 style="color: #fff;"><span id="pointsTotal">0</span><small>points</small></h1>
+              </div>
+          </div>
+      </div>
+  <?php endif ?>
 </div>
 
-<?php if ($sales->isNewRecord): ?>
-    <hr>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="points-form">
+<div class="col-md-12 well">
+  <h3>Bonus</h3>
+  <div class="row">
+      <div class="col-md-6">
+          <div class="points-form">
 
-                <?php $form = ActiveForm::begin(['action' => ['/points/create']]); ?>
-                
-                <?= $form->field($points, 'user_id')->textInput(['type' => 'hidden', 'value' => $user->id])->label(false) ?>
-                
-                <?= $form->field($points, 'points')->textInput(['type' => 'number', 'id' => 'points']) ?>
+              <?php $form = ActiveForm::begin(['action' => ['/points/create-solo']]); ?>
+              
+              <?= $form->field($points, 'user_id')->textInput(['type' => 'hidden', 'value' => $user->id])->label(false) ?>
+              
+              <?= $form->field($points, 'points')->textInput(['type' => 'number', 'id' => 'bonusPoints']) ?>
+              <h5><b>Note: Points submitted ignores the sharing system.</b></h5>
 
-                <div class="form-group">
-                    <?= Html::submitButton($points->isNewRecord ? 'Submit Points' : 'Update', ['class' => $points->isNewRecord ? 'btn btn-success btn-block btn-lg' : 'btn btn-primary btn-block btn-lg']) ?>
-                </div>
+              <div class="form-group">
+                  <?= Html::submitButton($points->isNewRecord ? 'Submit Points' : 'Update', ['class' => $points->isNewRecord ? 'btn btn-primary btn-block btn-md' : 'btn btn-primary btn-block btn-lg']) ?>
+              </div>
 
-                <?php ActiveForm::end(); ?>
+              <?php ActiveForm::end(); ?>
 
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="jumbotron" style="background: #f2f2f2;">
-                <h1><span id="pointsTotal">0</span><small>points</small></h1>
-            </div>
-        </div>
-    </div>
-<?php endif ?>
+          </div>
+      </div>
+      <div class="col-md-6">
+          <div class="jumbotron" style="background: #474747;">
+              <h1 style="color: #fff;"><span id="bonusPointsTotal">0</span><small>points</small></h1>
+          </div>
+      </div>
+  </div>
+</div>

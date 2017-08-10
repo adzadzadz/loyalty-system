@@ -54,6 +54,14 @@ class Points extends \yii\db\ActiveRecord
         return false;
     }
 
+    public function saveSolo()
+    {
+        if ($this->validate()) {
+            return $this->addPoints($this->user_id, $this->points);
+        }
+        return false;
+    }
+
     public function addPoints($user_id, $pointsVal)
     {
         $points = Points::findOne(['user_id' => $user_id]);
@@ -107,8 +115,9 @@ class Points extends \yii\db\ActiveRecord
             if ($user[$counter]) {
                 if ($this->addPoints($user[$counter], $type == "+" ? abs(Yii::$app->appConfig->pointsPerLevel) : -abs(Yii::$app->appConfig->pointsPerLevel))) {
                     $history = new History;
+                    $history->provider_user_id = $this->user_id;
                     $history->user_id = $user[$counter];
-                    $history->type = "points($this->user_id)";
+                    $history->type = "points shared";
                     $history->value = Yii::$app->appConfig->pointsPerLevel;
                 }
                 $history->save();
@@ -121,13 +130,18 @@ class Points extends \yii\db\ActiveRecord
             $lastLevel++;
             $counter++;
         }
-        return $user;
+        
         $me->last_user_given = $user[$counter - 1];
         $me->last_level_given = $lastLevel;
         if ($me->save()) {
             return $user;
         }
         return false;
+    }
+
+    public function getUser()
+    {
+        return $this->hasOne(\common\models\User::className(), ['user_id' => 'user_id']);
     }
 
     /**

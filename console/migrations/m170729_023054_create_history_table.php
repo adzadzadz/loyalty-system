@@ -14,6 +14,7 @@ class m170729_023054_create_history_table extends Migration
     {
         $this->createTable('{{%history}}', [
             'id' => $this->primaryKey(),
+            'provider_user_id' => $this->integer(),
             'user_id' => $this->integer(),
             'type' => $this->string(),
             'value' => $this->float(),

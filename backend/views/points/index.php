@@ -22,10 +22,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
             'user_id',
+            
+            ['label'=>'Username', 'value'=>function ($model, $index, $widget) { 
+                return "(" . $model->user->username . ") " . $model->user->firstname . " " . $model->user->lastname;
+            }],
+
             'points',
 
             ['label'=>'Created At', 'value'=>function ($model, $index, $widget) { 

@@ -23,7 +23,7 @@ class PointsController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index', 'view', 'create', 'update', 'delete'],
+                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'create-solo'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -92,7 +92,7 @@ class PointsController extends Controller
     {
         $model = new Points();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->saveSolo()) {
             Yii::$app->session->setFlash('success', "The Points record has been saved.");
             return $this->redirect(['index']);
         } else {

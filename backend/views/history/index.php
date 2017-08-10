@@ -25,7 +25,17 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'user_id',
+            ['label'=>'Provider', 'value'=>function ($model, $index, $widget) { 
+                if (isset($model->provider)) {
+                    return "(" . $model->provider->username . ") " . $model->provider->firstname . " " . $model->provider->lastname;
+                }
+                return "Admin";
+            }],
+
+            ['label'=>'Username', 'value'=>function ($model, $index, $widget) { 
+                return "(" . $model->user->username . ") " . $model->user->firstname . " " . $model->user->lastname;
+            }],
+
             'type',
             'value',
             ['label'=>'Created At', 'value'=>function ($model, $index, $widget) { 

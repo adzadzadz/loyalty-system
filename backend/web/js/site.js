@@ -7,3 +7,8 @@ $("#points").on('keyup', function() {
     var points = $(this).val();
     $("#pointsTotal").html(points);
 });
+
+$("#bonusPoints").on('keyup', function() {
+    var points = $(this).val();
+    $("#bonusPointsTotal").html(points);
+});

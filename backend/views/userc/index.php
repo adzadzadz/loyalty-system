@@ -31,6 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 $output = Html::a('Sales', Url::toRoute(['/sales/create', 'id' => $model->id]), ['class' => 'btn btn-sm btn-primary']);
                 $output .= " ";
                 $output .= Html::a('Create Downline', Url::toRoute(['/userc/create', 'upline_id' => $model->id]), ['class' => 'btn btn-sm btn-default']);
+                $output .= " ";
+                $output .= Html::a('Tree', Url::toRoute(['/userc/tree', 'id' => $model->id]), ['class' => 'btn btn-sm btn-default']);
                 return $output;
             }],
             'username',
@@ -41,9 +43,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'firstname',
             // 'middlename',
             'lastname',
-            'direct_upline',
-            'last_level_given',
-            'last_user_given',
+            // 'direct_upline',
+            // 'last_level_given',
+            // 'last_user_given',
             // 'birthdate',
             // 'gender',
             // 'civilstatus',

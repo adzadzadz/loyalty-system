@@ -45,10 +45,22 @@ class History extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'value', 'created_at', 'updated_at', 'created_by'], 'integer'],
+            [['user_id', 'value', 'provider_user_id', 'created_at', 'updated_at', 'created_by'], 'integer'],
+            ['provider_user_id', 'default', 'value' => 0],
             [['type'], 'string', 'max' => 255],
         ];
     }
+
+    public function getUser()
+    {
+        return $this->hasOne(\common\models\User::className(), ['user_id' => 'user_id']);
+    }
+
+    public function getProvider()
+    {
+        return $this->hasOne(\common\models\User::className(), ['user_id' => 'provider_user_id']);
+    }
+
 
     /**
      * @inheritdoc
@@ -57,6 +69,7 @@ class History extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'provider_user_id' => 'Provider User ID',
             'user_id' => 'User ID',
             'type' => 'Type',
             'value' => 'Value',

@@ -51,37 +51,19 @@ class UserOperations extends \common\models\User
 
         // Level 1
         foreach ($users[$baseUser->user_id]['dls'] as $user1) {
-            $data[$i] = [
-                'base' => $user1,
-                'dls'  => Static::findAll(['direct_upline' => $user1->user_id])
-            ];
-
-            $level[1][] = $data[$i]['base'];
-
+            $dls = Static::findAll(['direct_upline' => $user1->user_id]);
+            $level[1][] = $user1;
             // Level 2
-            foreach ($data[$i]['dls'] as $user2) {
-                $data[$i]['dls'][$i2] = [
-                  'base' => $user2,
-                  'dls'  => Static::findAll(['direct_upline' => $user2->user_id])
-                ];
-
-                $level[2][] = $data[$i]['dls'][$i2]['base'];
+            foreach ($dls as $user2) {
+                $dls1 = Static::findAll(['direct_upline' => $user2->user_id]);
+                $level[2][] = $user2;
                 // Level 3
-                foreach ($data[$i]['dls'][$i2]['dls'] as $user3) {
-                    $data[$i]['dls'][$i2]['dls'][$i3] = [
-                        'base' => $user3,
-                        'dls'  => null
-                    ];
-
-                    $level[3][] = $data[$i]['dls'][$i2]['dls'][$i3]['base'];
-                    $i3++;
+                foreach ($dls1 as $user3) {
+                    $level[3][] = $user3;
                 }
-                $i2++;
             }
-            $i++;
         }
-        $users[$baseUser->user_id]['dls'] = $data;
-        
+         
         return $level;
     }
 }

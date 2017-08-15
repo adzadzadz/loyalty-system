@@ -81,7 +81,7 @@ The markup will be simple nested lists
       <h3>Sales History <small>(Total Spent: <?= isset($sales->amount) ? $sales->amount : 0 ?> )</small></h3>
       <?php if (isset($sales->salesHistory)): ?>
         <?php foreach ($sales->salesHistory as $eachSale): ?>
-          <div>> <strong><?= $eachSale->description ?> <?= $eachSale->amount ?></strong></div>
+          <div>> <strong><i><?= $eachSale->description ?></i> (Php <?= $eachSale->amount ?>) </strong></div>
         <?php endforeach ?>
       <?php else: ?>
         <h4>No Purchases</h4>

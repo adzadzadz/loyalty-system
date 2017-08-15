@@ -10,6 +10,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use common\models\SalesHistory;
 
 /**
  * SalesController implements the CRUD actions for Sales model.
@@ -23,7 +24,7 @@ class SalesController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index', 'view', 'create', 'update', 'delete'],
+                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'view-purchases'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -70,7 +71,7 @@ class SalesController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate($id = null)
+    public function actionCreate($id = null, $type = null)
     {
         $sales = new Sales();
         $points = new Points();
@@ -79,9 +80,10 @@ class SalesController extends Controller
             return $this->redirect(['view', 'id' => $sales->id]);
         } else {
             return $this->render('create', [
-                'sales' => $sales,
-                'points' => $points,
+                'sales'   => $sales,
+                'points'  => $points,
                 'user_id' => $id,
+                'type'    => $type 
             ]);
         }
     }

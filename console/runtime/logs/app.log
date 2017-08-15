@@ -4176,3 +4176,75 @@ Stack trace:
     ]
     'argc' => 2
 ]
+2017-08-15 06:40:30 [-][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: m170815_043804_create_sales_history_table::string in D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\Files\Dropbox\projects\jephty\advanced\console\migrations\m170815_043804_create_sales_history_table.php(17): yii\base\Component->__get('string')
+#1 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(671): m170815_043804_create_sales_history_table->up()
+#2 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->migrateUp('m170815_043804_...')
+#3 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#4 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\console\Controller.php(128): yii\base\Controller->runAction('', Array)
+#7 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\console\Controller->runAction('', Array)
+#8 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#9 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#10 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#11 D:\Files\Dropbox\projects\jephty\advanced\yii(27): yii\base\Application->run()
+#12 {main}
+2017-08-15 06:40:28 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Adz\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SHEA-WHITE'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Adz'
+    'LOCALAPPDATA' => 'C:\\Users\\Adz\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SHEA-WHITE'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\Adz\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files\\Docker\\Docker\\Resources\\bin;D:\\Programs\\Python35-32\\Scripts\\;D:\\Programs\\Python35-32\\;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\curl\\curl-7.52.1;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\Programs\\;C:\\Users\\Adz\\AppData\\Roaming\\Python\\Scripts;D:\\Programs\\xampp\\php;C:\\Users\\Adz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Adz\\AppData\\Roaming\\Nodejs;C:\\Program Files (x86)\\Google\\google_appengine\\;C:\\Users\\Adz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\curl\\curl-7.52.1\\AMD64;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Adz\\AppData\\Roaming\\npm;D:\\Files\\Dropbox\\projects\\0-turboc\\ama\\tools\\mingw64\\bin;'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 94 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '5e03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\Adz\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Adz\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'SHEA-WHITE'
+    'USERDOMAIN_ROAMINGPROFILE' => 'SHEA-WHITE'
+    'USERNAME' => 'Adz'
+    'USERPROFILE' => 'C:\\Users\\Adz'
+    'VBOX_MSI_INSTALL_PATH' => 'D:\\Programs\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'D:\\Files\\Dropbox\\projects\\jephty\\advanced\\'
+    'PHP_SELF' => 'D:\\Files\\Dropbox\\projects\\jephty\\advanced\\yii'
+    'SCRIPT_NAME' => 'D:\\Files\\Dropbox\\projects\\jephty\\advanced\\yii'
+    'SCRIPT_FILENAME' => 'D:\\Files\\Dropbox\\projects\\jephty\\advanced\\yii'
+    'PATH_TRANSLATED' => 'D:\\Files\\Dropbox\\projects\\jephty\\advanced\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1502772028.8438
+    'REQUEST_TIME' => 1502772028
+    'argv' => [
+        0 => 'D:\\Files\\Dropbox\\projects\\jephty\\advanced\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]

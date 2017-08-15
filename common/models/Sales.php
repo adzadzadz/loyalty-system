@@ -6,6 +6,7 @@ use Yii;
 use yii\behaviors\TimestampBehavior;
 use common\models\History;
 use common\models\Points;
+use common\models\SalesHistory;
 
 /**
  * This is the model class for table "{{%sales}}".
@@ -17,6 +18,8 @@ use common\models\Points;
  */
 class Sales extends \yii\db\ActiveRecord
 {
+    public $description;
+
     /**
      * @inheritdoc
      */
@@ -40,6 +43,8 @@ class Sales extends \yii\db\ActiveRecord
         return [
             [['user_id', 'amount'], 'required'],
             [['user_id', 'created_at', 'updated_at'], 'integer'],
+            ['description', 'string'],
+            ['description', 'default', 'value' => 'none'],
             ['amount', 'number']
         ];
     }
@@ -66,17 +71,16 @@ class Sales extends \yii\db\ActiveRecord
             $history->type = "sales";
             $history->value = $this->amount;
 
-            // $points = new Points;
-            // $pointsData = [
-            //     'Points' => [
-            //         'user_id' => $this->user_id,
-            //         'points'  => $totalPoints,
-            //     ]
-            // ];
-            // $points->load($pointsData);
-            // return $points->savePoints();
             if ($sale->save() && $history->save()) {
-                return $sale;
+
+                $salesHistory = new SalesHistory;
+                $salesHistory->sales_id = $sale->id;
+                $salesHistory->description = $this->description;
+                $salesHistory->amount = $this->amount;
+
+                if ($salesHistory->save()) {
+                    return $sale;
+                }
             }
         }
         return false;
@@ -85,6 +89,11 @@ class Sales extends \yii\db\ActiveRecord
     public function getUser()
     {
         return $this->hasOne(\common\models\User::className(), ['user_id' => 'user_id']);
+    }
+
+    public function getSalesHistory()
+    {
+        return $this->hasMany(\common\models\SalesHistory::className(), ['sales_id' => 'id']);
     }
 
     /**
@@ -96,6 +105,7 @@ class Sales extends \yii\db\ActiveRecord
             'id' => 'ID',
             'user_id' => 'User ID',
             'amount' => 'Amount',
+            'description' => 'Description',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At'
         ];

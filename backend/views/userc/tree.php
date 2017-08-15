@@ -78,7 +78,7 @@ The markup will be simple nested lists
 </div>
 <div class="row">
     <div class="col-md-12 well" style="margin-top: 50px;">
-      <h3>Sales History</h3>
+      <h3>Sales History <small>(Total Spent: <?= $sales->amount ?> )</small></h3>
       <?php if (isset($sales->salesHistory)): ?>
         <?php foreach ($sales->salesHistory as $eachSale): ?>
           <div>> <strong><?= $eachSale->description ?> <?= $eachSale->amount ?></strong></div>

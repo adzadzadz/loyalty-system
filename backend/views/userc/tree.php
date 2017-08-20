@@ -20,18 +20,21 @@ The markup will be simple nested lists
     <a href="<?= Url::toRoute(['/sales/create', 'id' => $users[0][0]->user_id, 'type' => 'sales']) ?>" class="btn btn-sm btn-block btn-primary">Add Sales</a>
     <a href="<?= Url::toRoute(['/userc/create', 'upline_id' => $users[0][0]->user_id]) ?>" class="btn btn-sm btn-block btn-primary">Create Downline</a>
     
-    <div class="tree">
-      <ul>
-        <li>
-          <a href="<?= Url::toRoute(['/userc/tree', 'id' => $upline->user_id]) ?>">
-            <div><strong>Direct Upline</strong></div>
-            <div><?= $upline->firstname . " " . $upline->lastname ?></div>
-            <div><?= $upline->username ?></div>
-            <div style="color: red;">Points: <?= isset($upline->points->points) ? $upline->points->points : 0 ?></div> 
-          </a>
-        </li>
-      </ul>
-    </div>
+    <?php if (isset($upline)): ?>
+      <div class="tree">
+        <ul>
+          <li>
+            <a href="<?= Url::toRoute(['/userc/tree', 'id' => $upline->user_id]) ?>">
+              <div><strong>Direct Upline</strong></div>
+              <div><?= $upline->firstname . " " . $upline->lastname ?></div>
+              <div><?= $upline->username ?></div>
+              <div style="color: red;">Points: <?= isset($upline->points->points) ? $upline->points->points : 0 ?></div> 
+            </a>
+          </li>
+        </ul>
+      </div>
+    <?php endif ?>
+        
   </div>
 </div>
 <div class="col-md-10 tree-wrap">

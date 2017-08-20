@@ -1,8 +1,13 @@
 /*Now the CSS*/
 * {margin: 0; padding: 0;}
 
+.tree-wrap {
+  overflow: auto;
+  padding: 50px;
+}
+
 .tree {
-  max-width: 500px;
+  width: 3000px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 25px;

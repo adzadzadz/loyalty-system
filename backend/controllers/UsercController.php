@@ -42,7 +42,7 @@ class UsercController extends Controller
 
     public function actionTree($id)
     {
-        $users = UserOperations::getParent($id);
+        $users = UserOperations::getDownlines($id);
         $sales = \common\models\Sales::findOne(['user_id' => $id]);
         // return print_r($users[$id]['dls'][0]['dls']);
         // return print_r($users[0][0]->username);

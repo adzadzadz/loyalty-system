@@ -34,7 +34,7 @@ class UserOperations extends \common\models\User
         return false;
     }
 
-    public static function getParent($base_user_id, $levels = 3)
+    public static function getDownlines($base_user_id, $levels = 3)
     {
         $baseUser = Static::findOne($base_user_id);
         $users = [];
@@ -43,9 +43,6 @@ class UserOperations extends \common\models\User
             'dls' => Static::findAll(['direct_upline' => $baseUser->user_id])
         ];
         
-        $i = 0;
-        $i2 = 0;
-        $i3 = 0;
         $level = [];
         $level[0][] = $baseUser;
 

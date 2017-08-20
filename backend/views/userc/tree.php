@@ -1,7 +1,8 @@
 <?php 
 
 use yii\helpers\Url;
-    
+$upline = \common\models\User::findOne($users[0][0]->direct_upline);
+
 ?>
 
 <!--
@@ -18,9 +19,22 @@ The markup will be simple nested lists
     <a href="<?= Url::toRoute(['/sales/create', 'id' => $users[0][0]->user_id, 'type' => 'bonusPoints']) ?>" class="btn btn-sm btn-block btn-primary">Add Bonus Points</a>
     <a href="<?= Url::toRoute(['/sales/create', 'id' => $users[0][0]->user_id, 'type' => 'sales']) ?>" class="btn btn-sm btn-block btn-primary">Add Sales</a>
     <a href="<?= Url::toRoute(['/userc/create', 'upline_id' => $users[0][0]->user_id]) ?>" class="btn btn-sm btn-block btn-primary">Create Downline</a>
+    
+    <div class="tree">
+      <ul>
+        <li>
+          <a href="<?= Url::toRoute(['/userc/tree', 'id' => $upline->user_id]) ?>">
+            <div><strong>Direct Upline</strong></div>
+            <div><?= $upline->firstname . " " . $upline->lastname ?></div>
+            <div><?= $upline->username ?></div>
+            <div style="color: red;">Points: <?= isset($upline->points->points) ? $upline->points->points : 0 ?></div> 
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
-<div class="col-md-10">
+<div class="col-md-10 tree-wrap">
   <div class="tree">
     <ul>
       <li>

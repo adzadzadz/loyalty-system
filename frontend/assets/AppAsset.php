@@ -19,7 +19,7 @@ class AppAsset extends AssetBundle
         'css/owl.carousel.min.css',
         'css/animate.css',
         'css/main.css',
-        'style.css',
+        'css/style.css',
         'css/meanmenu.min.css',
         'css/responsive.css',
     ];

@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -41,9 +42,9 @@ AppAsset::register($this);
                 <div class="col-md-8 col-sm-8">
                     <div class="hd-lft">
                         <ul>
-                            <li><i class="fa fa-comment-o"></i> 24x7 live Support</li>
-                            <li><i class="fa fa-phone"></i>(888) 010203-4567</li>
-                            <li><i class="fa fa-comment"></i>Live Chat</li>
+                            <!-- <li><i class="fa fa-comment-o"></i> 24x7 live Support</li> -->
+                            <li><i class="fa fa-phone"></i>(+63) 977-842-2662</li>
+                            <!-- <li><i class="fa fa-comment"></i>Live Chat</li> -->
                         </ul>
                     </div>  
                 </div>  
@@ -74,23 +75,40 @@ AppAsset::register($this);
                     <div class="menu">
                         <nav id="main-menu" class="main-menu">
                             <ul>
-                                <li  class="active"><a href="index.html">Home</a></li> 
-                                <li><a href="project.html">Project</a></li> 
-                                <li><a href="service.html">Service<i class="fa fa-angle-down"></i></a>
-                                    <ul>
-                                        <li><a href="service.html">Service</a></li>
-                                        <li><a href="service-details.html">Service Details</a></li>
-                                    </ul>
-                                </li>                       
-                                <li><a href="about.html">About</a></li>                             
-                                <li><a href="team.html">Team</a></li>                               
-                                <li><a href="blog.html">Blog<i class="fa fa-angle-down"></i></a>
-                                    <ul>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>                               
-                                </li>
-                                <li><a href="contact.html">Contact Us</a></li>
+                                <li class="<?= $this->context->action->id == 'index' ? 'active' : '' ?>"><a href="<?= Url::toRoute(['/site/index']) ?>">Home</a></li> 
+                                <li class="<?= $this->context->action->id == 'about' ? 'active' : '' ?>"><a href="<?= Url::toRoute(['/site/about']) ?>">About</a></li> 
+                                <li class="<?= $this->context->action->id == 'contact' ? 'active' : '' ?>"><a href="<?= Url::toRoute(['/site/contact']) ?>">Contact</a></li>
+                                <?php if (Yii::$app->user->isGuest): ?>
+                                    <li class="<?= $this->context->action->id == 'login' ? 'active' : '' ?>"><a href="<?= Url::toRoute(['/site/login']) ?>">Login</a></li>    
+                                <?php else: ?>
+                                    <li>
+                                        <a href="">Account <i class="fa fa-angle-down"></i></a>
+                                        <ul>
+                                            <li><a href="">Profile</a></li>
+                                            <li><a href="<?= Url::toRoute(['/user/index']) ?>">Points</a></li>
+                                            <li><a href="<?= Url::toRoute(['/user/transtactions']) ?>">Transactions</a></li>
+                                            <li><a href="">Tree</a></li>
+                                            <li>
+                                                <?= Html::beginForm(['/site/logout'], 'post') ?>
+                                                <?= Html::submitButton(
+                                                    'Logout (' . Yii::$app->user->identity->username . ')',
+                                                    ['class' => 'btn btn-link', 'style' => '    color: #464646;
+                                                        display: block;
+                                                        font-size: 15px;
+                                                        font-weight: bold;
+                                                        text-decoration: none;
+                                                        text-transform: uppercase;
+                                                        transition: all 0.4s ease 0s;
+                                                        position: relative;
+                                                        line-height: 120%;
+                                                        padding: 10px 5px;
+                                                        color: #fff;']
+                                                ) ?>
+                                                <?= Html::endForm() ?>
+                                            </li>    
+                                        </ul>
+                                    </li>
+                                <?php endif ?>                                
                             </ul>
                         </nav>          
                     </div>                      
@@ -104,6 +122,26 @@ AppAsset::register($this);
 
 <?= $content ?>
 
+<!-- Call To Action Section Start -->   
+<div class="call-to-action-sec" style="background-image:url(<?= \Yii::getAlias("@web/imgs/contact-strip.jpg"); ?>);">
+    <div class="call-to-action-overlay"></div>
+    <div class="container">
+        <div class="row">   
+            <div class="col-md-8 col-sm-9">
+                <div class="call-to-action-text">
+                    <h2>If Need Any Help! Contact Us</h2>
+                    <p>Lorem ipsum dolor sit amet, pellentesque enim lorem quis vivamus amet. </p>
+                </div>                                              
+            </div>              
+            <div class="col-md-4 col-sm-3">
+                <div class="call-to-action-text">
+                    <a href="<?= Url::toRoute(['/site/contact']) ?>" class="btn">Contact Us</a>
+                </div>
+            </div>
+        </div>                  
+    </div>
+</div>
+<!-- Call To Action Section Start -->
 <footer>    
     <!-- Footer Top Section Start -->
     <div class="footer-sec">

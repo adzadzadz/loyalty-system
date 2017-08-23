@@ -35,6 +35,7 @@ class AppAsset extends AssetBundle
         'js/waypoints.min.js',
         'js/jquery.meanmenu.min.js',
         'js/custom.js',
+        // 'upsideDownText.js'
     ];
     public $depends = [
         // 'yii\web\YiiAsset',

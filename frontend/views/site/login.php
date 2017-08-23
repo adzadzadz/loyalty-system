@@ -5,17 +5,39 @@
 /* @var $model \common\models\LoginForm */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
+<!-- Page Heading Section Start --> 
+<div class="pagehding-sec" style="background-image:url(<?= \Yii::getAlias("@web/imgs/login-banner.jpg"); ?>);">
+    <div class="images-overlay"></div>      
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-7">
+                <div class="page-heading">
+                    <h1>Login</h1>
+                </div>
+            </div>              
+            <div class="col-md-6 col-sm-5">
+                <div class="page-heading">
+                    <ul>
+                        <li><a href="<?= Url::toRoute(['/site/index']) ?>">Home</a></li>
+                        <li><a href="">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Heading Section End -->
 
-    <div class="row">
+<!-- Contact Section Start -->
+<section class="contact-form-sec pt-50 pb-50">
+    <div class="container">
         <div class="col-lg-5">
             <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
@@ -36,4 +58,4 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php ActiveForm::end(); ?>
         </div>
     </div>
-</div>
+</section>

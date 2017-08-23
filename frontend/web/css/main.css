@@ -111,7 +111,8 @@ textarea:focus, input:focus{
     outline: none;
 }
 .slider-overlay {
-  background-color:rgba(31, 167, 236, 0.8);
+  /*background-color:rgba(31, 167, 236, 0.6);*/
+  background-color:rgba(0, 0, 0, 0.6) !important;
   height: 100%;  width: 100%;
   position: absolute;
   top: 0;z-index:1
@@ -729,7 +730,7 @@ text-align: center;
 ============================*/
 .call-to-action-sec{
   background-color: #fff;
-  background-image: url("../img/bannar.jpg");
+  /*background-image: url("../img/contact-strip.jpg");*/
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -774,7 +775,7 @@ margin-top: 10px;
 ===================*/
 .pricing-sec {
 background-attachment: fixed;
-background-image: url("../img/servicebg.jpg");
+/*background-image: url("../img/servicebg.jpg");*/
 background-position: center center;
 background-repeat: no-repeat;
 background-size: cover;

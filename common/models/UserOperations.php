@@ -19,12 +19,15 @@ class UserOperations extends \common\models\User
                 $generated = "$this->branch$no";
             } while (User::findOne(['username' => $generated]));
 
+            $rand = Yii::$app->security->generateRandomString(12);
+            // $rand = 'adzadz';
+
             $user->username = $generated;
             $user->firstname = $this->firstname;
             $user->middlename = $this->middlename;
             $user->lastname = $this->lastname;
             $user->direct_upline = $this->direct_upline;
-            $user->setPassword(Yii::$app->security->generateRandomString(8));
+            $user->setPassword($rand);
             $user->generateAuthKey();
 
             if ($user->save()) {

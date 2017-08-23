@@ -24795,3 +24795,837 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1503218725.233
     'REQUEST_TIME' => 1503218725
 ]
+2017-08-23 09:48:56 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in D:\Files\Dropbox\projects\jephty\advanced\backend\controllers\UsercController.php:152
+Stack trace:
+#0 D:\Files\Dropbox\projects\jephty\advanced\backend\controllers\UsercController.php(109): backend\controllers\UsercController->findModel('1735')
+#1 [internal function]: backend\controllers\UsercController->actionUpdate('1735')
+#2 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('update', Array)
+#5 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('userc/update', Array)
+#6 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\Files\Dropbox\projects\jephty\advanced\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-08-23 09:48:56 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][info][application] $_GET = [
+    'r' => 'userc/update'
+    'id' => '1735'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ÓÇÑ?›“£&¯¨íGw›®\'EEËáB«CÝeÜÏÃF\";}'
+    'advanced-backend' => 'bp8b87fbp29rmh6k17d90fvf33'
+    '_identity' => '37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Wk9btKT9RqahYix876WdKhhWi_5haD62\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Programs/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Programs/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.jephty.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%0D%D3%C7%D1%3F%9B%93%A3%26%AF%A8%EDGw%9B%AE%27EE%CB%E1B%ABC%DDe%DC%CF%C3F%10%01%22%3B%7D; advanced-backend=bp8b87fbp29rmh6k17d90fvf33; _identity=37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Wk9btKT9RqahYix876WdKhhWi_5haD62%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'D:\\Programs\\Python35-32\\Scripts\\;D:\\Programs\\Python35-32\\;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\curl\\curl-7.52.1;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\Programs\\;C:\\Users\\Adz\\AppData\\Roaming\\Python\\Scripts;D:\\Programs\\xampp\\php;C:\\Users\\Adz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Adz\\AppData\\Roaming\\Nodejs;C:\\Program Files (x86)\\Google\\google_appengine\\;C:\\Users\\Adz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\curl\\curl-7.52.1\\AMD64;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Adz\\AppData\\Roaming\\npm;D:\\Files\\Dropbox\\projects\\0-turboc\\ama\\tools\\mingw64\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5 Server at admin.jephty.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5'
+    'SERVER_NAME' => 'admin.jephty.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55029'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=userc%2Fupdate&id=1735'
+    'REQUEST_URI' => '/index.php?r=userc%2Fupdate&id=1735'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503474536.446
+    'REQUEST_TIME' => 1503474536
+]
+2017-08-23 09:55:27 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in D:\Files\Dropbox\projects\jephty\advanced\backend\controllers\UsercController.php:160
+Stack trace:
+#0 D:\Files\Dropbox\projects\jephty\advanced\backend\controllers\UsercController.php(109): backend\controllers\UsercController->findModel('1735')
+#1 [internal function]: backend\controllers\UsercController->actionUpdate('1735')
+#2 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('update', Array)
+#5 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('userc/update', Array)
+#6 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\Files\Dropbox\projects\jephty\advanced\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-08-23 09:55:27 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][info][application] $_GET = [
+    'r' => 'userc/update'
+    'id' => '1735'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ÓÇÑ?›“£&¯¨íGw›®\'EEËáB«CÝeÜÏÃF\";}'
+    'advanced-backend' => 'bp8b87fbp29rmh6k17d90fvf33'
+    '_identity' => '37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Wk9btKT9RqahYix876WdKhhWi_5haD62\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Programs/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Programs/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.jephty.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%0D%D3%C7%D1%3F%9B%93%A3%26%AF%A8%EDGw%9B%AE%27EE%CB%E1B%ABC%DDe%DC%CF%C3F%10%01%22%3B%7D; advanced-backend=bp8b87fbp29rmh6k17d90fvf33; _identity=37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Wk9btKT9RqahYix876WdKhhWi_5haD62%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'D:\\Programs\\Python35-32\\Scripts\\;D:\\Programs\\Python35-32\\;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\curl\\curl-7.52.1;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\Programs\\;C:\\Users\\Adz\\AppData\\Roaming\\Python\\Scripts;D:\\Programs\\xampp\\php;C:\\Users\\Adz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Adz\\AppData\\Roaming\\Nodejs;C:\\Program Files (x86)\\Google\\google_appengine\\;C:\\Users\\Adz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\curl\\curl-7.52.1\\AMD64;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Adz\\AppData\\Roaming\\npm;D:\\Files\\Dropbox\\projects\\0-turboc\\ama\\tools\\mingw64\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5 Server at admin.jephty.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5'
+    'SERVER_NAME' => 'admin.jephty.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55627'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=userc%2Fupdate&id=1735'
+    'REQUEST_URI' => '/index.php?r=userc%2Fupdate&id=1735'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503474927.401
+    'REQUEST_TIME' => 1503474927
+]
+2017-08-23 10:00:49 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\filters\AccessControl.php:154
+Stack trace:
+#0 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\filters\AccessControl.php(137): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('update-password', Array)
+#8 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('userc/update-pa...', Array)
+#9 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Files\Dropbox\projects\jephty\advanced\backend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2017-08-23 10:00:49 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][info][application] $_GET = [
+    'r' => 'userc/update-password'
+]
+
+$_POST = [
+    '_csrf-backend' => 'uw4TFt-92Do0QIajKDDVHoDyXO3lpHfV9ytbtAx-qdi23dTH4CZLmRLvLk5vR06wp7cZJgTm3JYqTod7zzi52Q=='
+    'id' => '17'
+    'password' => 'asdsad'
+    'confirmpassword' => 'asdasd'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ÓÇÑ?›“£&¯¨íGw›®\'EEËáB«CÝeÜÏÃF\";}'
+    'advanced-backend' => 'bp8b87fbp29rmh6k17d90fvf33'
+    '_identity' => '37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Wk9btKT9RqahYix876WdKhhWi_5haD62\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Programs/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Programs/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.jephty.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '532'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://admin.jephty.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarypB9nqXn3eIgS6E8f'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://admin.jephty.com/index.php?r=userc%2Fupdate&id=17'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%0D%D3%C7%D1%3F%9B%93%A3%26%AF%A8%EDGw%9B%AE%27EE%CB%E1B%ABC%DDe%DC%CF%C3F%10%01%22%3B%7D; advanced-backend=bp8b87fbp29rmh6k17d90fvf33; _identity=37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Wk9btKT9RqahYix876WdKhhWi_5haD62%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'D:\\Programs\\Python35-32\\Scripts\\;D:\\Programs\\Python35-32\\;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\curl\\curl-7.52.1;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\Programs\\;C:\\Users\\Adz\\AppData\\Roaming\\Python\\Scripts;D:\\Programs\\xampp\\php;C:\\Users\\Adz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Adz\\AppData\\Roaming\\Nodejs;C:\\Program Files (x86)\\Google\\google_appengine\\;C:\\Users\\Adz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\curl\\curl-7.52.1\\AMD64;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Adz\\AppData\\Roaming\\npm;D:\\Files\\Dropbox\\projects\\0-turboc\\ama\\tools\\mingw64\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5 Server at admin.jephty.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5'
+    'SERVER_NAME' => 'admin.jephty.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56223'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=userc%2Fupdate-password'
+    'REQUEST_URI' => '/index.php?r=userc%2Fupdate-password'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503475249.607
+    'REQUEST_TIME' => 1503475249
+]
+2017-08-23 10:01:17 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: Yii in D:\Files\Dropbox\projects\jephty\advanced\backend\controllers\UsercController.php:122
+Stack trace:
+#0 D:\Files\Dropbox\projects\jephty\advanced\backend\controllers\UsercController.php(122): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\Files\\Dropbo...', 122, Array)
+#1 [internal function]: backend\controllers\UsercController->actionUpdatePassword()
+#2 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('update-password', Array)
+#5 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('userc/update-pa...', Array)
+#6 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\Files\Dropbox\projects\jephty\advanced\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-08-23 10:01:17 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][info][application] $_GET = [
+    'r' => 'userc/update-password'
+]
+
+$_POST = [
+    '_csrf-backend' => 'uw4TFt-92Do0QIajKDDVHoDyXO3lpHfV9ytbtAx-qdi23dTH4CZLmRLvLk5vR06wp7cZJgTm3JYqTod7zzi52Q=='
+    'id' => '17'
+    'password' => 'asdsad'
+    'confirmpassword' => 'asdasd'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ÓÇÑ?›“£&¯¨íGw›®\'EEËáB«CÝeÜÏÃF\";}'
+    'advanced-backend' => 'bp8b87fbp29rmh6k17d90fvf33'
+    '_identity' => '37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Wk9btKT9RqahYix876WdKhhWi_5haD62\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Programs/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Programs/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.jephty.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '532'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://admin.jephty.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarypB9nqXn3eIgS6E8f'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://admin.jephty.com/index.php?r=userc%2Fupdate&id=17'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%0D%D3%C7%D1%3F%9B%93%A3%26%AF%A8%EDGw%9B%AE%27EE%CB%E1B%ABC%DDe%DC%CF%C3F%10%01%22%3B%7D; advanced-backend=bp8b87fbp29rmh6k17d90fvf33; _identity=37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Wk9btKT9RqahYix876WdKhhWi_5haD62%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'D:\\Programs\\Python35-32\\Scripts\\;D:\\Programs\\Python35-32\\;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\curl\\curl-7.52.1;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\Programs\\;C:\\Users\\Adz\\AppData\\Roaming\\Python\\Scripts;D:\\Programs\\xampp\\php;C:\\Users\\Adz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Adz\\AppData\\Roaming\\Nodejs;C:\\Program Files (x86)\\Google\\google_appengine\\;C:\\Users\\Adz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\curl\\curl-7.52.1\\AMD64;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Adz\\AppData\\Roaming\\npm;D:\\Files\\Dropbox\\projects\\0-turboc\\ama\\tools\\mingw64\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5 Server at admin.jephty.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5'
+    'SERVER_NAME' => 'admin.jephty.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56287'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=userc%2Fupdate-password'
+    'REQUEST_URI' => '/index.php?r=userc%2Fupdate-password'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503475277.444
+    'REQUEST_TIME' => 1503475277
+]
+2017-08-23 10:01:25 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Response content must not be an array. in D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\web\Response.php:1041
+Stack trace:
+#0 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\web\Response.php(334): yii\web\Response->prepare()
+#1 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Response->send()
+#2 D:\Files\Dropbox\projects\jephty\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2017-08-23 10:01:25 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][info][application] $_GET = [
+    'r' => 'userc/update-password'
+]
+
+$_POST = [
+    '_csrf-backend' => 'uw4TFt-92Do0QIajKDDVHoDyXO3lpHfV9ytbtAx-qdi23dTH4CZLmRLvLk5vR06wp7cZJgTm3JYqTod7zzi52Q=='
+    'id' => '17'
+    'password' => 'asdsad'
+    'confirmpassword' => 'asdasd'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ÓÇÑ?›“£&¯¨íGw›®\'EEËáB«CÝeÜÏÃF\";}'
+    'advanced-backend' => 'bp8b87fbp29rmh6k17d90fvf33'
+    '_identity' => '37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Wk9btKT9RqahYix876WdKhhWi_5haD62\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Programs/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Programs/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.jephty.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '532'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://admin.jephty.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarypB9nqXn3eIgS6E8f'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://admin.jephty.com/index.php?r=userc%2Fupdate&id=17'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%0D%D3%C7%D1%3F%9B%93%A3%26%AF%A8%EDGw%9B%AE%27EE%CB%E1B%ABC%DDe%DC%CF%C3F%10%01%22%3B%7D; advanced-backend=bp8b87fbp29rmh6k17d90fvf33; _identity=37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Wk9btKT9RqahYix876WdKhhWi_5haD62%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'D:\\Programs\\Python35-32\\Scripts\\;D:\\Programs\\Python35-32\\;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\curl\\curl-7.52.1;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\Programs\\;C:\\Users\\Adz\\AppData\\Roaming\\Python\\Scripts;D:\\Programs\\xampp\\php;C:\\Users\\Adz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Adz\\AppData\\Roaming\\Nodejs;C:\\Program Files (x86)\\Google\\google_appengine\\;C:\\Users\\Adz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\curl\\curl-7.52.1\\AMD64;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Adz\\AppData\\Roaming\\npm;D:\\Files\\Dropbox\\projects\\0-turboc\\ama\\tools\\mingw64\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5 Server at admin.jephty.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5'
+    'SERVER_NAME' => 'admin.jephty.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56289'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=userc%2Fupdate-password'
+    'REQUEST_URI' => '/index.php?r=userc%2Fupdate-password'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503475285.539
+    'REQUEST_TIME' => 1503475285
+]
+2017-08-23 10:08:39 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: newpass in D:\Files\Dropbox\projects\jephty\advanced\backend\controllers\UsercController.php:125
+Stack trace:
+#0 D:\Files\Dropbox\projects\jephty\advanced\backend\controllers\UsercController.php(125): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\Files\\Dropbo...', 125, Array)
+#1 [internal function]: backend\controllers\UsercController->actionUpdatePassword()
+#2 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('update-password', Array)
+#5 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('userc/update-pa...', Array)
+#6 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\Files\Dropbox\projects\jephty\advanced\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-08-23 10:08:39 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][info][application] $_GET = [
+    'r' => 'userc/update-password'
+]
+
+$_POST = [
+    '_csrf-backend' => 'WTsAtbgN7b5UMNtqJeWsbDf86HRNMcOMDJKiN9oYtM9U6Mdkh5Z-HXKfc4dikjfCELmtv6xzaM_R9374GV6kzg=='
+    'user_id' => '17'
+    'password' => 'adsad'
+    'confirmpassword' => 'asdsad'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ÓÇÑ?›“£&¯¨íGw›®\'EEËáB«CÝeÜÏÃF\";}'
+    'advanced-backend' => 'bp8b87fbp29rmh6k17d90fvf33'
+    '_identity' => '37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Wk9btKT9RqahYix876WdKhhWi_5haD62\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Programs/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Programs/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.jephty.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '536'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://admin.jephty.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryhNbOmWwAikLtRBzk'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://admin.jephty.com/index.php?r=userc%2Fupdate&id=17'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%0D%D3%C7%D1%3F%9B%93%A3%26%AF%A8%EDGw%9B%AE%27EE%CB%E1B%ABC%DDe%DC%CF%C3F%10%01%22%3B%7D; advanced-backend=bp8b87fbp29rmh6k17d90fvf33; _identity=37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Wk9btKT9RqahYix876WdKhhWi_5haD62%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'D:\\Programs\\Python35-32\\Scripts\\;D:\\Programs\\Python35-32\\;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\curl\\curl-7.52.1;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\Programs\\;C:\\Users\\Adz\\AppData\\Roaming\\Python\\Scripts;D:\\Programs\\xampp\\php;C:\\Users\\Adz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Adz\\AppData\\Roaming\\Nodejs;C:\\Program Files (x86)\\Google\\google_appengine\\;C:\\Users\\Adz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\curl\\curl-7.52.1\\AMD64;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Adz\\AppData\\Roaming\\npm;D:\\Files\\Dropbox\\projects\\0-turboc\\ama\\tools\\mingw64\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5 Server at admin.jephty.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5'
+    'SERVER_NAME' => 'admin.jephty.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '57014'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=userc%2Fupdate-password'
+    'REQUEST_URI' => '/index.php?r=userc%2Fupdate-password'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503475719.361
+    'REQUEST_TIME' => 1503475719
+]
+2017-08-23 10:13:17 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2-bootstrap\Alert.php:110
+Stack trace:
+#0 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2-bootstrap\Alert.php(110): yii\base\ErrorHandler->handleError(8, 'Array to string...', 'D:\\Files\\Dropbo...', 110, Array)
+#1 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2-bootstrap\Alert.php(89): yii\bootstrap\Alert->renderBodyEnd()
+#2 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Widget.php(139): yii\bootstrap\Alert->run()
+#3 D:\Files\Dropbox\projects\jephty\advanced\common\widgets\Alert.php(67): yii\base\Widget::widget(Array)
+#4 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Object.php(107): common\widgets\Alert->init()
+#5 [internal function]: yii\base\Object->__construct(Array)
+#6 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\di\Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#7 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('common\\widgets\\...', Array, Array)
+#8 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('common\\widgets\\...', Array, Array)
+#9 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Widget.php(136): yii\BaseYii::createObject(Array)
+#10 D:\Files\Dropbox\projects\jephty\advanced\backend\views\layouts\main.php(68): yii\base\Widget::widget()
+#11 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\View.php(330): require('D:\\Files\\Dropbo...')
+#12 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\Files\\Dropbo...', Array)
+#13 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(396): yii\base\View->renderFile('D:\\Files\\Dropbo...', Array, Object(backend\controllers\UsercController))
+#14 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\Controller->renderContent('<div class="use...')
+#15 D:\Files\Dropbox\projects\jephty\advanced\backend\controllers\UsercController.php(78): yii\base\Controller->render('view', Array)
+#16 [internal function]: backend\controllers\UsercController->actionView('17')
+#17 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#18 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#19 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('view', Array)
+#20 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('userc/view', Array)
+#21 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\Files\Dropbox\projects\jephty\advanced\backend\web\index.php(17): yii\base\Application->run()
+#23 {main}
+2017-08-23 10:13:17 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][info][application] $_GET = [
+    'r' => 'userc/view'
+    'id' => '17'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ÓÇÑ?›“£&¯¨íGw›®\'EEËáB«CÝeÜÏÃF\";}'
+    'advanced-backend' => 'bp8b87fbp29rmh6k17d90fvf33'
+    '_identity' => '37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Wk9btKT9RqahYix876WdKhhWi_5haD62\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'error' => 1
+    ]
+    '__returnUrl' => '/'
+    '__id' => 1
+    'error' => [
+        'password' => [
+            0 => 'Password must be equal to \"Confirmpassword\".'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Programs/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Programs/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.jephty.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://admin.jephty.com/index.php?r=userc%2Fupdate&id=17'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%0D%D3%C7%D1%3F%9B%93%A3%26%AF%A8%EDGw%9B%AE%27EE%CB%E1B%ABC%DDe%DC%CF%C3F%10%01%22%3B%7D; advanced-backend=bp8b87fbp29rmh6k17d90fvf33; _identity=37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Wk9btKT9RqahYix876WdKhhWi_5haD62%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'D:\\Programs\\Python35-32\\Scripts\\;D:\\Programs\\Python35-32\\;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\curl\\curl-7.52.1;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\Programs\\;C:\\Users\\Adz\\AppData\\Roaming\\Python\\Scripts;D:\\Programs\\xampp\\php;C:\\Users\\Adz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Adz\\AppData\\Roaming\\Nodejs;C:\\Program Files (x86)\\Google\\google_appengine\\;C:\\Users\\Adz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\curl\\curl-7.52.1\\AMD64;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Adz\\AppData\\Roaming\\npm;D:\\Files\\Dropbox\\projects\\0-turboc\\ama\\tools\\mingw64\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5 Server at admin.jephty.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5'
+    'SERVER_NAME' => 'admin.jephty.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '57464'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=userc%2Fview&id=17'
+    'REQUEST_URI' => '/index.php?r=userc%2Fview&id=17'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503475997.562
+    'REQUEST_TIME' => 1503475997
+]
+2017-08-23 10:14:13 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\UserOperations::getErrors in D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(285): yii\base\Component->__get('getErrors')
+#1 D:\Files\Dropbox\projects\jephty\advanced\backend\controllers\UsercController.php(133): yii\db\BaseActiveRecord->__get('getErrors')
+#2 [internal function]: backend\controllers\UsercController->actionUpdatePassword()
+#3 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('update-password', Array)
+#6 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('userc/update-pa...', Array)
+#7 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\Files\Dropbox\projects\jephty\advanced\backend\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2017-08-23 10:14:13 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][info][application] $_GET = [
+    'r' => 'userc/update-password'
+]
+
+$_POST = [
+    '_csrf-backend' => 'MvxLCUAZbOKNzolRzdRDaE7vlUhfuSpFJmOuDFG_inA_L4zYf4L_QathIbyKo9jGaarQg777gQb7BnLDkvmacQ=='
+    'user_id' => '17'
+    'password' => 'gdgdfg'
+    'confirmpassword' => 'dfgdd'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ÓÇÑ?›“£&¯¨íGw›®\'EEËáB«CÝeÜÏÃF\";}'
+    'advanced-backend' => 'bp8b87fbp29rmh6k17d90fvf33'
+    '_identity' => '37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Wk9btKT9RqahYix876WdKhhWi_5haD62\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Programs/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Programs/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.jephty.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '536'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://admin.jephty.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary55Lr9AglRBhBjpVb'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://admin.jephty.com/index.php?r=userc%2Fupdate&id=17'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%0D%D3%C7%D1%3F%9B%93%A3%26%AF%A8%EDGw%9B%AE%27EE%CB%E1B%ABC%DDe%DC%CF%C3F%10%01%22%3B%7D; advanced-backend=bp8b87fbp29rmh6k17d90fvf33; _identity=37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Wk9btKT9RqahYix876WdKhhWi_5haD62%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'D:\\Programs\\Python35-32\\Scripts\\;D:\\Programs\\Python35-32\\;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\curl\\curl-7.52.1;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\Programs\\;C:\\Users\\Adz\\AppData\\Roaming\\Python\\Scripts;D:\\Programs\\xampp\\php;C:\\Users\\Adz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Adz\\AppData\\Roaming\\Nodejs;C:\\Program Files (x86)\\Google\\google_appengine\\;C:\\Users\\Adz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\curl\\curl-7.52.1\\AMD64;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Adz\\AppData\\Roaming\\npm;D:\\Files\\Dropbox\\projects\\0-turboc\\ama\\tools\\mingw64\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5 Server at admin.jephty.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5'
+    'SERVER_NAME' => 'admin.jephty.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '57582'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=userc%2Fupdate-password'
+    'REQUEST_URI' => '/index.php?r=userc%2Fupdate-password'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503476053.873
+    'REQUEST_TIME' => 1503476053
+]
+2017-08-23 10:15:40 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Invalid validation rule: a rule must specify both attribute names and validator type. in D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Model.php:450
+Stack trace:
+#0 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Model.php(411): yii\base\Model->createValidators()
+#1 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Model.php(187): yii\base\Model->getValidators()
+#2 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Model.php(347): yii\base\Model->scenarios()
+#3 D:\Files\Dropbox\projects\jephty\advanced\backend\controllers\UsercController.php(127): yii\base\Model->validate()
+#4 [internal function]: backend\controllers\UsercController->actionUpdatePassword()
+#5 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#7 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('update-password', Array)
+#8 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('userc/update-pa...', Array)
+#9 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Files\Dropbox\projects\jephty\advanced\backend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2017-08-23 10:15:40 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][info][application] $_GET = [
+    'r' => 'userc/update-password'
+]
+
+$_POST = [
+    '_csrf-backend' => 'MvxLCUAZbOKNzolRzdRDaE7vlUhfuSpFJmOuDFG_inA_L4zYf4L_QathIbyKo9jGaarQg777gQb7BnLDkvmacQ=='
+    'user_id' => '17'
+    'password' => 'gdgdfg'
+    'confirmpassword' => 'dfgdd'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ÓÇÑ?›“£&¯¨íGw›®\'EEËáB«CÝeÜÏÃF\";}'
+    'advanced-backend' => 'bp8b87fbp29rmh6k17d90fvf33'
+    '_identity' => '37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Wk9btKT9RqahYix876WdKhhWi_5haD62\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Programs/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Programs/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.jephty.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '536'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://admin.jephty.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary55Lr9AglRBhBjpVb'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://admin.jephty.com/index.php?r=userc%2Fupdate&id=17'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%0D%D3%C7%D1%3F%9B%93%A3%26%AF%A8%EDGw%9B%AE%27EE%CB%E1B%ABC%DDe%DC%CF%C3F%10%01%22%3B%7D; advanced-backend=bp8b87fbp29rmh6k17d90fvf33; _identity=37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Wk9btKT9RqahYix876WdKhhWi_5haD62%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'D:\\Programs\\Python35-32\\Scripts\\;D:\\Programs\\Python35-32\\;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\curl\\curl-7.52.1;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\Programs\\;C:\\Users\\Adz\\AppData\\Roaming\\Python\\Scripts;D:\\Programs\\xampp\\php;C:\\Users\\Adz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Adz\\AppData\\Roaming\\Nodejs;C:\\Program Files (x86)\\Google\\google_appengine\\;C:\\Users\\Adz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\curl\\curl-7.52.1\\AMD64;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Adz\\AppData\\Roaming\\npm;D:\\Files\\Dropbox\\projects\\0-turboc\\ama\\tools\\mingw64\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5 Server at admin.jephty.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5'
+    'SERVER_NAME' => 'admin.jephty.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '57760'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=userc%2Fupdate-password'
+    'REQUEST_URI' => '/index.php?r=userc%2Fupdate-password'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503476140.029
+    'REQUEST_TIME' => 1503476140
+]
+2017-08-23 10:17:05 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: backend\controllers\UsercController::password in D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\Files\Dropbox\projects\jephty\advanced\backend\controllers\UsercController.php(128): yii\base\Component->__get('password')
+#1 [internal function]: backend\controllers\UsercController->actionUpdatePassword()
+#2 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('update-password', Array)
+#5 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('userc/update-pa...', Array)
+#6 D:\Files\Dropbox\projects\jephty\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\Files\Dropbox\projects\jephty\advanced\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2017-08-23 10:17:05 [127.0.0.1][1][bp8b87fbp29rmh6k17d90fvf33][info][application] $_GET = [
+    'r' => 'userc/update-password'
+]
+
+$_POST = [
+    '_csrf-backend' => 'XUkigZiR4QSyuGl56MB9nhpez-9qE_9HH9oz3mv23U1QmuVQpwpyp5QXwZSvt-YwPRuKJItRVATCv-8RqLDNTA=='
+    'user_id' => '17'
+    'password' => 'qwer'
+    'confirmpassword' => 'qwer'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ÓÇÑ?›“£&¯¨íGw›®\'EEËáB«CÝeÜÏÃF\";}'
+    'advanced-backend' => 'bp8b87fbp29rmh6k17d90fvf33'
+    '_identity' => '37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Wk9btKT9RqahYix876WdKhhWi_5haD62\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Programs/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Programs/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.jephty.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '533'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://admin.jephty.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryDY0DiY9d7PiF4EDH'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://admin.jephty.com/index.php?r=userc%2Fupdate&id=17'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=30f5b78bc0e0fae6ede39bd133bb40496d671f8d96e51fe246af9a5d53b65223a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%0D%D3%C7%D1%3F%9B%93%A3%26%AF%A8%EDGw%9B%AE%27EE%CB%E1B%ABC%DDe%DC%CF%C3F%10%01%22%3B%7D; advanced-backend=bp8b87fbp29rmh6k17d90fvf33; _identity=37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Wk9btKT9RqahYix876WdKhhWi_5haD62%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'D:\\Programs\\Python35-32\\Scripts\\;D:\\Programs\\Python35-32\\;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\curl\\curl-7.52.1;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\Programs\\;C:\\Users\\Adz\\AppData\\Roaming\\Python\\Scripts;D:\\Programs\\xampp\\php;C:\\Users\\Adz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Adz\\AppData\\Roaming\\Nodejs;C:\\Program Files (x86)\\Google\\google_appengine\\;C:\\Users\\Adz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\curl\\curl-7.52.1\\AMD64;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Adz\\AppData\\Roaming\\npm;D:\\Files\\Dropbox\\projects\\0-turboc\\ama\\tools\\mingw64\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5 Server at admin.jephty.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5'
+    'SERVER_NAME' => 'admin.jephty.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Files/Dropbox/projects/jephty/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '57905'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=userc%2Fupdate-password'
+    'REQUEST_URI' => '/index.php?r=userc%2Fupdate-password'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503476225.244
+    'REQUEST_TIME' => 1503476225
+]

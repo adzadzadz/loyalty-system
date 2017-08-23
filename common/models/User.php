@@ -35,6 +35,8 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     const STATUS_ACTIVE = 10;
 
     public $branch;
+    public $password;
+    public $confirmpassword;
 
     /**
      * @inheritdoc
@@ -59,9 +61,10 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
         return [
             [['firstname', 'lastname'], 'required'],
             [['direct_upline', 'birthdate', 'status', 'created_at', 'updated_at'], 'integer'],
-            [['branch', 'username', 'password_hash', 'password_reset_token', 'email', 'firstname', 'middlename', 'lastname', 'gender', 'civilstatus', 'citizenship', 'homeaddress', 'telephonenumber', 'faxnumber', 'mobilenumber'], 'string', 'max' => 255],
+            [['password', 'confirmpassword', 'branch', 'username', 'password_hash', 'password_reset_token', 'email', 'firstname', 'middlename', 'lastname', 'gender', 'civilstatus', 'citizenship', 'homeaddress', 'telephonenumber', 'faxnumber', 'mobilenumber'], 'string', 'max' => 255],
             [['auth_key'], 'string', 'max' => 32],
             [['username'], 'unique'],
+            ['password', 'compare', 'compareAttribute' => 'confirmpassword', 'message' => 'Passwords do not match'],
             [['email'], 'unique'],
             [['has_one_point', 'last_level_given', 'last_user_given'], 'integer'],
             [['password_reset_token'], 'unique'],

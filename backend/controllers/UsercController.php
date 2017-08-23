@@ -25,7 +25,7 @@ class UsercController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'tree'],
+                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'tree', 'update-password'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -115,6 +115,26 @@ class UsercController extends Controller
                 'model' => $model,
             ]);
         }
+    }
+
+    public function actionUpdatePassword()
+    {
+        if (isset(Yii::$app->request->post()['user_id'])) {
+            $user = $this->findModel(Yii::$app->request->post()['user_id']);
+            $user->password = Yii::$app->request->post()['password'];
+            $user->confirmpassword = Yii::$app->request->post()['confirmpassword'];
+            // return var_dump($user->validate());
+            if ($user->validate()) {
+                $user->setPassword($user->password);
+            }            
+            if ($user->save()) {
+                Yii::$app->session->setFlash('success', 'Password has been updated succesfully.');
+            } else {
+                Yii::$app->session->setFlash('error', $user->getErrors('password')[0]);
+            }
+            return $this->redirect(['update', 'id' => $user->id]);
+        }
+        return $this->redirect(['index']);
     }
 
     /**

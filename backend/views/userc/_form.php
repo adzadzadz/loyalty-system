@@ -26,7 +26,7 @@ use yii\widgets\ActiveForm;
 <?php endif ?>
     
 </div>
-<div class="col-sm-6">
+<div class="col-sm-12">
     <div class="user-form">
 
         <?php $form = ActiveForm::begin(); ?>

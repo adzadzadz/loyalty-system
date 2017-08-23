@@ -33,38 +33,40 @@ use yii\helpers\Url;
 			<div class="container">						
 				<div class="row">			
 					<div class="col-lg-6 col-md-6 col-sm-6">
-						<div class="about-img">
-							<img src="<?= \Yii::getAlias("@web/imgs/points-page-1.jpg") ?>" alt=""/>
-						</div>
-					</div>				
-					<div class="col-lg-6 col-md-6 col-sm-6">
 						<div class="abt-lft">
-							<h2>Current Points</h2>
-							<h3>Personal</h3>
-							<table class="table table-striped">
-								<tr>
-									<td><?= isset($user->points) ? $user->points->points : 0; ?>pts</td>
-								</tr>
-							</table>
-							<h3>Shared</h3>
+							<h2>Recent Transactions</h2>
+							<h3>Purchases</h3>
 							<table class="table table-striped">
 								<thead>
 									<tr>
-										<th>Name</th>
-										<th>Points</th>
+										<th>Description</th>
+										<th>Amount</th>
+										<th>Date</th>
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td>adz</td>
-										<td>400pts</td>
-									</tr>
-									<tr>
-										<td>Total</td>
-										<td>400pts</td>
-									</tr>
+									<?php if (isset($sales->salesHistory)): ?>
+										<?php foreach ($sales->salesHistory as $sale): ?>
+											<tr>
+												<td><?= $sale->description ?></td>
+												<td>P <strong><?= $sale->amount ?></strong></td>
+												<td><?= date('Y-m-d (h:m:s)', $sale->created_at) ?></td>
+											</tr>
+										<?php endforeach ?>
+									<?php else: ?>
+										<tr>
+											<td>No recent transactions</td>
+											<td>0</td>
+											<td>---</td>
+										</tr>
+									<?php endif ?>        
 								</tbody>
 							</table>				
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="about-img">
+							<img src="<?= \Yii::getAlias("@web/imgs/transactions-page-1.jpg") ?>" alt=""/>
 						</div>
 					</div>					
 				</div>	

@@ -56,12 +56,8 @@ use yii\helpers\Url;
 								</thead>
 								<tbody>
 									<tr>
-										<td>adz</td>
-										<td>400pts</td>
-									</tr>
-									<tr>
-										<td>Total</td>
-										<td>400pts</td>
+										<td>----</td>
+										<td>----</td>
 									</tr>
 								</tbody>
 							</table>				

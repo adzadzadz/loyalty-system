@@ -84,10 +84,10 @@ AppAsset::register($this);
                                     <li>
                                         <a href="">Account <i class="fa fa-angle-down"></i></a>
                                         <ul>
-                                            <li><a href="">Profile</a></li>
-                                            <li><a href="<?= Url::toRoute(['/user/index']) ?>">Points</a></li>
-                                            <li><a href="<?= Url::toRoute(['/user/transtactions']) ?>">Transactions</a></li>
-                                            <li><a href="">Tree</a></li>
+                                            <li><a href="<?= Url::toRoute(['/user/profile']) ?>">Profile</a></li>
+                                            <li><a href="<?= Url::toRoute(['/user/points']) ?>">Points</a></li>
+                                            <li><a href="<?= Url::toRoute(['/user/transactions']) ?>">Transactions</a></li>
+                                            <li><a href="<?= Url::toRoute(['/user/tree']) ?>">Tree</a></li>
                                             <li>
                                                 <?= Html::beginForm(['/site/logout'], 'post') ?>
                                                 <?= Html::submitButton(

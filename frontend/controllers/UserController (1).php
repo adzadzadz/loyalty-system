@@ -60,12 +60,7 @@ class UserController extends \yii\web\Controller
 
     public function actionTree()
     {
-    	$users = User::getDownlines(Yii::$app->user->id);
-        // return print_r($users[$id]['dls'][0]['dls']);
-        // return print_r($users[0][0]->username);
-        return $this->render('tree', [
-            'users' => $users,
-        ]);
+    	return $this->render('/site/coming');
     }
 
     public function actionProfile()

@@ -7,9 +7,11 @@
 }
 
 .tree {
+  /*width: 300px;*/
   margin-right: auto;
   margin-left: auto;
   margin-top: 25px;
+  overflow: auto;
 }
 
 .tree ul {
@@ -38,6 +40,7 @@
   position: absolute; top: 0; right: 50%;
   border-top: 1px solid #ccc;
   width: 50%; height: 20px;
+  /*width: 50%; height: 20px;*/
 }
 .tree li::after{
   right: auto; left: 50%;

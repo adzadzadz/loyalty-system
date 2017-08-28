@@ -22,7 +22,6 @@ class AppAsset extends AssetBundle
         'css/style.css',
         'css/meanmenu.min.css',
         'css/responsive.css',
-        'css/dloyalty.css',
     ];
     public $js = [
         // 'js/jquery-2.2.4.min.js',

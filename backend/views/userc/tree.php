@@ -3,6 +3,11 @@
 use yii\helpers\Url;
 $upline = \common\models\User::findOne($users[0][0]->direct_upline);
 
+$u1 = isset($users[1]) ? count($users[1]) : 0;
+$u2 = isset($users[2]) ? count($users[2]) : 0;
+$u3 = isset($users[3]) ? count($users[3]) : 0;
+$treeWidth = ($u1 + $u2 + $u3) * 100;
+
 ?>
 
 <!--
@@ -38,7 +43,7 @@ The markup will be simple nested lists
   </div>
 </div>
 <div class="col-md-10 tree-wrap">
-  <div class="tree">
+  <div class="tree" style="<?= $treeWidth ?>px">
     <ul>
       <li>
         <a href="">

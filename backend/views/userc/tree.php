@@ -43,7 +43,7 @@ The markup will be simple nested lists
   </div>
 </div>
 <div class="col-md-10 tree-wrap">
-  <div class="tree" style="<?= $treeWidth ?>px">
+  <div class="tree" style="width: <?= $treeWidth ?>px">
     <ul>
       <li>
         <a href="">

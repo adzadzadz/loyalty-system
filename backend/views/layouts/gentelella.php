@@ -8,7 +8,7 @@
 use yii\helpers\Html;
 
 $bundle = yiister\gentelella\assets\Asset::register($this);
-
+$me = \Yii::$app->user->identity;
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title><?= Html::encode('Loyalty Rewards') ?></title>
     <?php $this->head() ?>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -37,7 +37,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
             <div class="left_col scroll-view">
 
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="/" class="site_title"><i class="fa fa-paw"></i> <span>Gentellela Alela!</span></a>
+                    <a href="/" class="site_title"><i class="fa fa-paw"></i> <span>Loyalty Rewards</span></a>
                 </div>
                 <div class="clearfix"></div>
 
@@ -48,7 +48,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
-                        <h2>John Doe</h2>
+                        <h2><?= \Yii::$app->user->isGuest ? 'guest' : $me->username ?></h2>
                     </div>
                 </div>
                 <!-- /menu prile quick info -->
@@ -58,8 +58,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                 <!-- sidebar menu -->
                 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
-                    <div class="menu_section">
-                        <h3>General</h3>
+                    <div class="menu_section" >
+                        <h3>Main Menu</h3>
                         <?=
                         \yiister\gentelella\widgets\Menu::widget(
                             [
@@ -69,6 +69,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                     ["label" => "Sales", "url" => ["sales/index"], "icon" => "dollar"],
                                     ["label" => "Points", "url" => ["points/index"], "icon" => "line-chart"],
                                     ["label" => "History", "url" => ["history/index"], "icon" => "history"],
+                                    ["label" => "Logout", "url" => ["/site/logout"], "icon" => "sign-out"],
                                     // [
                                     //     "label" => "Widgets",
                                     //     "icon" => "th",
@@ -138,7 +139,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
 
                 <!-- /menu footer buttons -->
                 <div class="sidebar-footer hidden-small">
-                    <a data-toggle="tooltip" data-placement="top" title="Settings">
+                    <!-- <a data-toggle="tooltip" data-placement="top" title="Settings">
                         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                     </a>
                     <a data-toggle="tooltip" data-placement="top" title="FullScreen">
@@ -146,10 +147,10 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                     </a>
                     <a data-toggle="tooltip" data-placement="top" title="Lock">
                         <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-                    </a>
-                    <a data-toggle="tooltip" data-placement="top" title="Logout">
+                    </a> -->
+                    <!-- <a data-toggle="tooltip" data-placement="top" title="Logout">
                         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-                    </a>
+                    </a> -->
                 </div>
                 <!-- /menu footer buttons -->
             </div>
@@ -167,10 +168,10 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="http://placehold.it/128x128" alt="">John Doe
+                                <img src="http://placehold.it/128x128" alt=""><?= \Yii::$app->user->isGuest ? 'guest' : $me->username ?>
                                 <span class=" fa fa-angle-down"></span>
                             </a>
-                            <ul class="dropdown-menu dropdown-usermenu pull-right">
+                            <!-- <ul class="dropdown-menu dropdown-usermenu pull-right">
                                 <li><a href="javascript:;">  Profile</a>
                                 </li>
                                 <li>
@@ -182,12 +183,13 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                 <li>
                                     <a href="javascript:;">Help</a>
                                 </li>
-                                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                <li>
+                                    <a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </li>
 
-                        <li role="presentation" class="dropdown">
+                        <!-- <li role="presentation" class="dropdown">
                             <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-envelope-o"></i>
                                 <span class="badge bg-green">6</span>
@@ -195,10 +197,10 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                             <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                                 <li>
                                     <a>
-                      <span class="image">
+                          <span class="image">
                                         <img src="http://placehold.it/128x128" alt="Profile Image" />
                                     </span>
-                      <span>
+                          <span>
                                         <span>John Smith</span>
                       <span class="time">3 mins ago</span>
                       </span>
@@ -258,7 +260,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                     </div>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
 
                     </ul>
                 </nav>
@@ -289,13 +291,13 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
             <div class="clearfix"></div>
 
             <?= $content ?>
+
         </div>
         <!-- /page content -->
         <!-- footer content -->
         <footer>
             <div class="pull-right">
-                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com" rel="nofollow" target="_blank">Colorlib</a><br />
-                Extension for Yii framework 2 by <a href="http://yiister.ru" rel="nofollow" target="_blank">Yiister</a>
+                Powered by <a href="http://adzbyte.com" target="_blank">Adzbyte Solutions</a>
             </div>
             <div class="clearfix"></div>
         </footer>
@@ -310,6 +312,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
     <div class="clearfix"></div>
     <div id="notif-group" class="tabbed_notifications"></div>
 </div>
+
 <!-- /footer content -->
 <?php $this->endBody(); ?>
 </body>

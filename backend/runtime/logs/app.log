@@ -25699,3 +25699,238 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1504105737.03
     'REQUEST_TIME' => 1504105737
 ]
+2017-08-31 09:06:42 [127.0.0.1][1][nolddhot28of0amcj72vd8fl43][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\Superuser::firstname in D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(285): yii\base\Component->__get('firstname')
+#1 D:\Files\Google Drive\www\projects\jephty\advanced\backend\views\layouts\gentelella.php(170): yii\db\BaseActiveRecord->__get('firstname')
+#2 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\View.php(330): require('D:\\Files\\Google...')
+#3 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\Files\\Google...', Array)
+#4 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(396): yii\base\View->renderFile('D:\\Files\\Google...', Array, Object(backend\controllers\HistoryController))
+#5 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\Controller->renderContent('<div class="his...')
+#6 D:\Files\Google Drive\www\projects\jephty\advanced\backend\controllers\HistoryController.php(51): yii\base\Controller->render('index', Array)
+#7 [internal function]: backend\controllers\HistoryController->actionIndex()
+#8 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#11 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('history/index', Array)
+#12 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Files\Google Drive\www\projects\jephty\advanced\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+2017-08-31 09:06:42 [127.0.0.1][1][nolddhot28of0amcj72vd8fl43][info][application] $_GET = [
+    'r' => 'history/index'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'nolddhot28of0amcj72vd8fl43'
+    '_csrf-backend' => '983000b5ed1cbb829cbad235a0d38aa3c7bd18ea2754fe09bc26f22a6657b222a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"(ßPÐpÿ÷‡¬Eàð{è=#6ûÒXÃX‹l~\";}'
+    'menuIsCollapsed' => 'false'
+    '_identity' => '37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Wk9btKT9RqahYix876WdKhhWi_5haD62\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Programs/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Programs/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.jephty.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://admin.jephty.com/index.php?r=sales%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=nolddhot28of0amcj72vd8fl43; _csrf-backend=983000b5ed1cbb829cbad235a0d38aa3c7bd18ea2754fe09bc26f22a6657b222a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%7F%10%28%08%DFP%D0p%FF%F7%87%ACE%E0%F0%0C%7B%E8%3D%23%196%1F%FB%0C%D2X%C3X%8Bl%7E%22%3B%7D; menuIsCollapsed=false; _identity=37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Wk9btKT9RqahYix876WdKhhWi_5haD62%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'D:\\Programs\\Python35-32\\Scripts\\;D:\\Programs\\Python35-32\\;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\curl\\curl-7.52.1;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\Programs\\;C:\\Users\\Adz\\AppData\\Roaming\\Python\\Scripts;D:\\Programs\\xampp\\php;C:\\Users\\Adz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Adz\\AppData\\Roaming\\Nodejs;C:\\Program Files (x86)\\Google\\google_appengine\\;C:\\Users\\Adz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\curl\\curl-7.52.1\\AMD64;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Adz\\AppData\\Roaming\\npm;D:\\Files\\Dropbox\\projects\\0-turboc\\ama\\tools\\mingw64\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5 Server at admin.jephty.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5'
+    'SERVER_NAME' => 'admin.jephty.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/Files/Google Drive/www/projects/jephty/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Files/Google Drive/www/projects/jephty/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Files/Google Drive/www/projects/jephty/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '59414'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=history%2Findex'
+    'REQUEST_URI' => '/index.php?r=history%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1504163202.668
+    'REQUEST_TIME' => 1504163202
+]
+2017-08-31 09:41:58 [127.0.0.1][1][nolddhot28of0amcj72vd8fl43][error][yii\web\HttpException:405] yii\web\MethodNotAllowedHttpException: Method Not Allowed. This url can only handle the following request methods: POST. in D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\filters\VerbFilter.php:105
+Stack trace:
+#0 [internal function]: yii\filters\VerbFilter->beforeAction(Object(yii\base\ActionEvent))
+#1 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('logout', Array)
+#6 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('site/logout', Array)
+#7 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\Files\Google Drive\www\projects\jephty\advanced\backend\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2017-08-31 09:41:57 [127.0.0.1][1][nolddhot28of0amcj72vd8fl43][info][application] $_GET = [
+    'r' => 'site/logout'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'nolddhot28of0amcj72vd8fl43'
+    '_csrf-backend' => '983000b5ed1cbb829cbad235a0d38aa3c7bd18ea2754fe09bc26f22a6657b222a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"(ßPÐpÿ÷‡¬Eàð{è=#6ûÒXÃX‹l~\";}'
+    'menuIsCollapsed' => 'false'
+    '_identity' => '37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Wk9btKT9RqahYix876WdKhhWi_5haD62\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Programs/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Programs/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.jephty.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://admin.jephty.com/index.php?r=history%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=nolddhot28of0amcj72vd8fl43; _csrf-backend=983000b5ed1cbb829cbad235a0d38aa3c7bd18ea2754fe09bc26f22a6657b222a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%7F%10%28%08%DFP%D0p%FF%F7%87%ACE%E0%F0%0C%7B%E8%3D%23%196%1F%FB%0C%D2X%C3X%8Bl%7E%22%3B%7D; menuIsCollapsed=false; _identity=37154e55980da68f5200f8996a148f061cb697933bc5ceed50861c1f995ff3c0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Wk9btKT9RqahYix876WdKhhWi_5haD62%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'D:\\Programs\\Python35-32\\Scripts\\;D:\\Programs\\Python35-32\\;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\curl\\curl-7.52.1;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\Programs\\;C:\\Users\\Adz\\AppData\\Roaming\\Python\\Scripts;D:\\Programs\\xampp\\php;C:\\Users\\Adz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Adz\\AppData\\Roaming\\Nodejs;C:\\Program Files (x86)\\Google\\google_appengine\\;C:\\Users\\Adz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\curl\\curl-7.52.1\\AMD64;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Adz\\AppData\\Roaming\\npm;D:\\Files\\Dropbox\\projects\\0-turboc\\ama\\tools\\mingw64\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5 Server at admin.jephty.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5'
+    'SERVER_NAME' => 'admin.jephty.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/Files/Google Drive/www/projects/jephty/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Files/Google Drive/www/projects/jephty/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Files/Google Drive/www/projects/jephty/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '60511'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogout'
+    'REQUEST_URI' => '/index.php?r=site%2Flogout'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1504165317.964
+    'REQUEST_TIME' => 1504165317
+]
+2017-08-31 09:42:13 [127.0.0.1][-][1s2t7hdu10mtfcp00m5orhpus1][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in D:\Files\Google Drive\www\projects\jephty\advanced\backend\views\layouts\gentelella.php:51
+Stack trace:
+#0 D:\Files\Google Drive\www\projects\jephty\advanced\backend\views\layouts\gentelella.php(51): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', 'D:\\Files\\Google...', 51, Array)
+#1 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\View.php(330): require('D:\\Files\\Google...')
+#2 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\Files\\Google...', Array)
+#3 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(396): yii\base\View->renderFile('D:\\Files\\Google...', Array, Object(backend\controllers\SiteController))
+#4 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#5 D:\Files\Google Drive\www\projects\jephty\advanced\backend\controllers\SiteController.php(83): yii\base\Controller->render('login', Array)
+#6 [internal function]: backend\controllers\SiteController->actionLogin()
+#7 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('login', Array)
+#10 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('site/login', Array)
+#11 D:\Files\Google Drive\www\projects\jephty\advanced\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\Files\Google Drive\www\projects\jephty\advanced\backend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2017-08-31 09:42:13 [127.0.0.1][-][1s2t7hdu10mtfcp00m5orhpus1][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '983000b5ed1cbb829cbad235a0d38aa3c7bd18ea2754fe09bc26f22a6657b222a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"(ßPÐpÿ÷‡¬Eàð{è=#6ûÒXÃX‹l~\";}'
+    'menuIsCollapsed' => 'false'
+    'advanced-backend' => '1s2t7hdu10mtfcp00m5orhpus1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/index.php'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Programs/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Programs/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.jephty.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://admin.jephty.com/index.php?r=history%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=983000b5ed1cbb829cbad235a0d38aa3c7bd18ea2754fe09bc26f22a6657b222a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22%7F%10%28%08%DFP%D0p%FF%F7%87%ACE%E0%F0%0C%7B%E8%3D%23%196%1F%FB%0C%D2X%C3X%8Bl%7E%22%3B%7D; menuIsCollapsed=false; advanced-backend=1s2t7hdu10mtfcp00m5orhpus1'
+    'PATH' => 'D:\\Programs\\Python35-32\\Scripts\\;D:\\Programs\\Python35-32\\;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\curl\\curl-7.52.1;C:\\Program Files (x86)\\Skype\\Phone\\;D:\\Programs\\;C:\\Users\\Adz\\AppData\\Roaming\\Python\\Scripts;D:\\Programs\\xampp\\php;C:\\Users\\Adz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Adz\\AppData\\Roaming\\Nodejs;C:\\Program Files (x86)\\Google\\google_appengine\\;C:\\Users\\Adz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\curl\\curl-7.52.1\\AMD64;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Adz\\AppData\\Roaming\\npm;D:\\Files\\Dropbox\\projects\\0-turboc\\ama\\tools\\mingw64\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5 Server at admin.jephty.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5'
+    'SERVER_NAME' => 'admin.jephty.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/Files/Google Drive/www/projects/jephty/advanced/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Files/Google Drive/www/projects/jephty/advanced/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Files/Google Drive/www/projects/jephty/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '60537'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1504165333.647
+    'REQUEST_TIME' => 1504165333
+]

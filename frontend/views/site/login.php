@@ -1,61 +1,71 @@
 <?php
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \common\models\LoginForm */
 
-use yii\helpers\Html;
-use yii\helpers\Url;
-use yii\bootstrap\ActiveForm;
+$this->title = 'Sign In';
 
-$this->title = 'Login';
-$this->params['breadcrumbs'][] = $this->title;
+$fieldOptions1 = [
+    'options' => ['class' => 'form-group has-feedback'],
+    'inputTemplate' => "{input}<span class='glyphicon glyphicon-envelope form-control-feedback'></span>"
+];
+
+$fieldOptions2 = [
+    'options' => ['class' => 'form-group has-feedback'],
+    'inputTemplate' => "{input}<span class='glyphicon glyphicon-lock form-control-feedback'></span>"
+];
 ?>
 
-<!-- Page Heading Section Start --> 
-<div class="pagehding-sec" style="background-image:url(<?= \Yii::getAlias("@web/imgs/login-banner.jpg"); ?>);">
-    <div class="images-overlay"></div>      
-    <div class="container">
+<div class="login-box">
+    <div class="login-logo">
+        <a href="#"><?= Yii::$app->name ?></a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">Sign in to your account</p>
+
+        <?php $form = ActiveForm::begin(['id' => 'login-form', 'enableClientValidation' => false]); ?>
+
+        <?= $form
+            ->field($model, 'username', $fieldOptions1)
+            ->label(false)
+            ->textInput(['placeholder' => $model->getAttributeLabel('username')]) ?>
+
+        <?= $form
+            ->field($model, 'password', $fieldOptions2)
+            ->label(false)
+            ->passwordInput(['placeholder' => $model->getAttributeLabel('password')]) ?>
+
         <div class="row">
-            <div class="col-md-6 col-sm-7">
-                <div class="page-heading">
-                    <h1>Login</h1>
-                </div>
-            </div>              
-            <div class="col-md-6 col-sm-5">
-                <div class="page-heading">
-                    <ul>
-                        <li><a href="<?= Url::toRoute(['/site/index']) ?>">Home</a></li>
-                        <li><a href="">Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Page Heading Section End -->
-
-<!-- Contact Section Start -->
-<section class="contact-form-sec pt-50 pb-50">
-    <div class="container">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
-
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
-
-                <?= $form->field($model, 'password')->passwordInput() ?>
-
+            <div class="col-xs-8">
                 <?= $form->field($model, 'rememberMe')->checkbox() ?>
-
-                <div style="color:#999;margin:1em 0">
-                    If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
-                </div>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
-                </div>
-
-            <?php ActiveForm::end(); ?>
+            </div>
+            <!-- /.col -->
+            <div class="col-xs-4">
+                <?= Html::submitButton('Sign in', ['class' => 'btn btn-primary btn-block btn-flat', 'name' => 'login-button']) ?>
+            </div>
+            <!-- /.col -->
         </div>
+
+
+        <?php ActiveForm::end(); ?>
+        
+        <?php /*
+        <div class="social-auth-links text-center">
+            <p>- OR -</p>
+            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in
+                using Facebook</a>
+            <a href="#" class="btn btn-block btn-social btn-google-plus btn-flat"><i class="fa fa-google-plus"></i> Sign
+                in using Google+</a>
+        </div>
+        <!-- /.social-auth-links -->
+
+        <a href="#">I forgot my password</a><br>
+        <a href="register.html" class="text-center">Register a new membership</a>
+        */ ?>
     </div>
-</section>
+    <!-- /.login-box-body -->
+</div><!-- /.login-box -->

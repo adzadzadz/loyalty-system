@@ -17,7 +17,6 @@ class ComposerStaticInit8bfcfcc48015b2eb1d171aee5940b29a
     public static $prefixLengthsPsr4 = array (
         'y' => 
         array (
-            'yiister\\gentelella\\' => 19,
             'yii\\swiftmailer\\' => 16,
             'yii\\gii\\' => 8,
             'yii\\faker\\' => 10,
@@ -38,6 +37,10 @@ class ComposerStaticInit8bfcfcc48015b2eb1d171aee5940b29a
         array (
             'kartik\\base\\' => 12,
             'kartik\\alert\\' => 13,
+        ),
+        'd' => 
+        array (
+            'dmstr\\' => 6,
         ),
         'c' => 
         array (
@@ -86,10 +89,6 @@ class ComposerStaticInit8bfcfcc48015b2eb1d171aee5940b29a
     );
 
     public static $prefixDirsPsr4 = array (
-        'yiister\\gentelella\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/yiister/yii2-gentelella',
-        ),
         'yii\\swiftmailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer',
@@ -135,6 +134,10 @@ class ComposerStaticInit8bfcfcc48015b2eb1d171aee5940b29a
         'kartik\\alert\\' => 
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-widget-alert',
+        ),
+        'dmstr\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dmstr/yii2-adminlte-asset',
         ),
         'cebe\\markdown\\' => 
         array (
@@ -219,6 +222,13 @@ class ComposerStaticInit8bfcfcc48015b2eb1d171aee5940b29a
     );
 
     public static $prefixesPsr0 = array (
+        'c' => 
+        array (
+            'cebe\\gravatar\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/cebe/yii2-gravatar',
+            ),
+        ),
         'P' => 
         array (
             'Prophecy\\' => 

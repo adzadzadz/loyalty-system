@@ -13,6 +13,7 @@ class m170815_043804_create_sales_history_table extends Migration
     public function up()
     {
         $this->createTable('sales_history', [
+            'id' => $this->primaryKey(),
             'sales_id' => $this->integer(),
             'description' => $this->string()->notNull(),
             'amount' => $this->float()->notNull(),

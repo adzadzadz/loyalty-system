@@ -24,7 +24,7 @@ class SalesController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'view-purchases'],
+                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'view-purchases', 'history'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -51,6 +51,17 @@ class SalesController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    public function actionHistory()
+    {
+        $searchModel = new SalesHistory();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('history', [
+            'dataProvider' => $dataProvider,
+            'searchModel'  => $searchModel
         ]);
     }
 

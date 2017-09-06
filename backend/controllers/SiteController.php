@@ -22,8 +22,9 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login'],
                         'allow' => true,
+                        'roles' => ['?']
                     ],
                     [
                         'actions' => ['logout', 'index'],
@@ -49,7 +50,6 @@ class SiteController extends Controller
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
-                'view' => '@yiister/gentelella/views/error'
             ],
         ];
     }

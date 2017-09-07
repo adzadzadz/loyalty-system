@@ -38,7 +38,6 @@ class PointsController extends Controller
         ];
     }
 
-
     /**
      * Lists all Points models.
      * @return mixed

@@ -184,26 +184,20 @@ function et_sanitize_alpha_color( $color ) {
 }
 
 /**
- * Sanitize font icon
+ * Sanitize font icon picker
  * @param string
- * @param string
- * @return string
+ * @return string|bool
  */
-function et_sanitize_font_icon( $font_icon, $symbols_function = 'default' ) {
+function et_sanitize_font_icon( $choosen ) {
 	// Convert symbols into strings
-	$font_icon = trim( $font_icon );
-	$icon_symbols = is_callable( $symbols_function ) ? call_user_func( $symbols_function ) : et_pb_get_font_icon_symbols();
-	$icon_symbols = array_map( 'et_sanitize_font_icon_convert_icon_to_string', $icon_symbols );
+	$symbols = array_map( 'et_sanitize_font_icon_convert_icon_to_string', et_pb_get_font_icon_symbols() );
 
-	// the exact font icon value is saved
-	if ( 1 !== preg_match( "/^%%/", $font_icon ) ) {
-		return in_array( $font_icon, $icon_symbols ) ? $font_icon : '';
+	// If choosen icon isn't found in symbol set, return false
+	if ( ! in_array( $choosen, $symbols ) ) {
+		return false;
 	}
 
-	// the font icon value is saved in the following format: %%index_number%%
-	// strip the %'s to get to end result: index_number
-	$icon_index = (int) str_replace( '%', '', $font_icon );
-	return isset( $icon_symbols[ $icon_index ] ) ? $icon_symbols[ $icon_index ] : '';
+	return $choosen;
 }
 
 /**

@@ -22,14 +22,13 @@ function et_fb_enqueue_main_assets() {
 		wp_enqueue_style( 'et-frontend-builder', "{$assets}/css/style.css", array(
 			'et_pb_admin_date_css',
 			'wp-mediaelement',
-			'wp-color-picker',
-			'et-core-admin',
+			'wp-color-picker'
 		), $ver );
 	}
 
 	// Load Divi Builder style.css file with hardcore CSS resets and Full Open Sans font if the Divi Builder plugin is active
 	if ( et_is_builder_plugin_active() ) {
-		wp_enqueue_style( 'et-builder-divi-builder-styles', "{$assets}/css/divi-builder-style.css", array( 'et-core-admin' ), $ver );
+		wp_enqueue_style( 'et-builder-divi-builder-styles', "{$assets}/css/divi-builder-style.css", array(), $ver );
 		et_fb_enqueue_open_sans();
 	}
 

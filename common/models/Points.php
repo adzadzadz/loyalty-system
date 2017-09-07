@@ -49,7 +49,14 @@ class Points extends \yii\db\ActiveRecord
             if ($this->addPoints($this->user_id, $this->points)) {
                 $levels = $this->points / Yii::$app->appConfig->pointPerLevel;
             }
-            return $this->distributePoints(abs($levels), $type = $levels > 0 ? "+" : "-");
+            $history = new History;
+            $history->provider_user_id = $this->user_id;
+            $history->user_id = $user[$counter];
+            $history->type = "points shared";
+            $history->value = Yii::$app->appConfig->pointsPerLevel;
+            if ($history->save()) {
+                return $this->distributePoints(abs($levels), $type = $levels > 0 ? "+" : "-");
+            }
         }
         return false;
     }
@@ -119,8 +126,8 @@ class Points extends \yii\db\ActiveRecord
                     $history->user_id = $user[$counter];
                     $history->type = "points shared";
                     $history->value = Yii::$app->appConfig->pointsPerLevel;
+                    $history->save();
                 }
-                $history->save();
             }
             if ($direct_upline = User::findOne($user[$counter])->direct_upline) {
 
@@ -137,6 +144,11 @@ class Points extends \yii\db\ActiveRecord
             return $user;
         }
         return false;
+    }
+
+    public function undo($transaction_id)
+    {
+
     }
 
     public function getUser()

@@ -22,7 +22,7 @@ use common\models\User;
     </div>
 </div>
 
-<div class="col-md-12 well">
+<div class="col-md-6 well">
   <h3>Regular Transactions</h3>
 
   <?php if ($type == 'sales' || $type == null): ?>
@@ -89,7 +89,7 @@ use common\models\User;
 </div>
 
 <?php if ($type == 'bonusPoints' || $type == null): ?>
-  <div class="col-md-12 well">
+<div class="col-md-6 well" style="background-color: #aef2ca;">
     <h3>Bonus</h3>
     <div class="row">
         <div class="col-md-6">
@@ -116,5 +116,5 @@ use common\models\User;
             </div>
         </div>
     </div>
-  </div>
+</div>
 <?php endif ?>

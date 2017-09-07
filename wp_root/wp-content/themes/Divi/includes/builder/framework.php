@@ -2,10 +2,10 @@
 
 require_once( ET_BUILDER_DIR . 'core.php' );
 
-if ( wp_doing_ajax() && ! is_customize_preview() ) {
+if ( defined( 'DOING_AJAX' ) && DOING_AJAX && ! is_customize_preview() ) {
 	define( 'WPE_HEARTBEAT_INTERVAL', et_builder_heartbeat_interval() );
 
-	$_builder_load_actions = array(
+	$builder_load_actions = array(
 		'et_pb_get_backbone_template',
 		'et_pb_get_backbone_templates',
 		'et_pb_process_computed_property',
@@ -25,17 +25,11 @@ if ( wp_doing_ajax() && ! is_customize_preview() ) {
 		'et_fb_process_imported_content',
 		'et_fb_get_saved_templates',
 		'et_fb_retrieve_builder_data',
-		'et_builder_email_add_account',
-		'et_builder_email_remove_account',
-		'et_builder_email_get_lists',
 	);
 
 	if ( class_exists( 'Easy_Digital_Downloads') ) {
-		$_builder_load_actions[] = 'edd_load_gateway';
+		$builder_load_actions[] = 'edd_load_gateway';
 	}
-
-	$builder_load_actions = apply_filters( 'et_builder_load_actions', array() );
-	$builder_load_actions = array_merge( $builder_load_actions, $_builder_load_actions );
 
 	$force_builder_load = isset( $_POST['et_load_builder_modules'] ) && '1' === $_POST['et_load_builder_modules'];
 
@@ -60,7 +54,6 @@ add_action( 'wp_enqueue_scripts', 'et_builder_load_global_functions_script', 7 )
 
 function et_builder_load_modules_styles() {
 	$current_page_id = apply_filters( 'et_is_ab_testing_active_post_id', get_the_ID() );
-	$is_fb_enabled = function_exists( 'et_fb_enabled' ) ? et_fb_enabled() : false;
 
 	wp_register_script( 'google-maps-api', esc_url( add_query_arg( array( 'key' => et_pb_get_google_api_key(), 'callback' => 'initMap' ), is_ssl() ? 'https://maps.googleapis.com/maps/api/js' : 'http://maps.googleapis.com/maps/api/js' ) ), array(), ET_BUILDER_VERSION, true );
 	wp_enqueue_script( 'divi-fitvids', ET_BUILDER_URI . '/scripts/jquery.fitvids.js', array( 'jquery' ), ET_BUILDER_VERSION, true );
@@ -80,7 +73,7 @@ function et_builder_load_modules_styles() {
 	}
 
 	// Load visible.min.js only if AB testing active on current page OR VB (because post settings is synced between VB and BB)
-	if ( et_is_ab_testing_active() || $is_fb_enabled ) {
+	if ( et_is_ab_testing_active() || et_fb_enabled() ) {
 		wp_enqueue_script( 'et-jquery-visible-viewport', ET_BUILDER_URI . '/scripts/ext/jquery.visible.min.js', array( 'jquery', 'et-builder-modules-script' ), ET_BUILDER_VERSION, true );
 	}
 
